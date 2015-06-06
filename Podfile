@@ -1,0 +1,6 @@
+platform :ios, '7.0'
+pod 'FMDB'
+pod 'UIAlertView+Blocks'
+pod 'UIActionSheet+Blocks'
+pod 'CTAssetsPickerController'
+pod 'SVProgressHUD'

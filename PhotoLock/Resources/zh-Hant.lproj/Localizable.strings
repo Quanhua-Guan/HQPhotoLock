@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  PhotoLock
+
+  Created by 泉华 官 on 15/1/6.
+  Copyright (c) 2015年 CQMH. All rights reserved.
+*/
+
+"Old Password"="舊密碼";
+"Please enter your old password"="請輸入您的舊密碼";
+"New Password"="新密碼";
+"Please enter your new password"="請輸入您的新密碼";
+"OK"="好的";
+"Tip"="提示";
+"Do you remember your new passwod?"="您記住您的新密碼了?";
+"NO, Wait!"="還沒!";
+"YES, Save it!"="是的, 保存!";
+"Pictures"="圖片";
+"Delete album will also delete photos in it, which cannot be recovered! Do you want to delete this album?"="刪除相冊將會刪除相冊中的所有圖片,不可恢復! 是否刪除?";
+"Cancel"="取消";
+"Delete"="刪除";
+"Processing^_^"="處理中...";
+"Done"="完成";
+"New album"="新建相冊";
+"Please enter album name"="請輸入相冊名";
+"Rename album"="重命名相冊";
+"Please enter new album name"="請輸入新相冊名";
+"Import Pictures"="導入圖片";
+"Please select where to import picture:"="請選擇圖片導入源:";
+"iTunes file sharing"="iTunes文件共享";
+"Photos"="相冊";
+"Please select at least 1 picture!"="請至少選擇1張相片!";
+"Deleted pictures can not be recovered! Do you want to delete these pictures?"="刪除圖片不可恢復! 是否刪除?";
+"Error occurs"="發生了錯誤喲~";

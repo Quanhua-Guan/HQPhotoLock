@@ -1,0 +1,24 @@
+
+/* Class = "IBUINavigationItem"; title = "Set password"; ObjectID = "6AI-SD-VHM"; */
+"6AI-SD-VHM.title" = "設置密碼";
+
+/* Class = "IBUILabel"; text = "Change password"; ObjectID = "InN-0q-TOE"; */
+"InN-0q-TOE.text" = "修改密碼";
+
+/* Class = "IBUITableViewSection"; headerTitle = " "; ObjectID = "LBy-lu-l6F"; */
+"LBy-lu-l6F.headerTitle" = " ";
+
+/* Class = "IBUIViewController"; title = "密码设置"; ObjectID = "LMT-rM-8Sw"; */
+"LMT-rM-8Sw.title" = "密碼設置";
+
+/* Class = "IBUINavigationItem"; title = "Photos"; ObjectID = "LTP-Ym-qPH"; */
+"LTP-Ym-qPH.title" = "圖片";
+
+/* Class = "IBUINavigationItem"; title = "Albums"; ObjectID = "MSe-V8-OzI"; */
+"MSe-V8-OzI.title" = "相冊";
+
+/* Class = "IBUINavigationItem"; title = "Settings"; ObjectID = "UlV-wk-4uK"; */
+"UlV-wk-4uK.title" = "設置";
+
+/* Class = "IBUILabel"; text = "First album"; ObjectID = "ona-wh-Zok"; */
+"ona-wh-Zok.text" = "First album";

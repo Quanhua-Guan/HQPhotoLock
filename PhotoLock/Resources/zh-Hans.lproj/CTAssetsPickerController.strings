@@ -1,0 +1,11 @@
+/* 
+  CTAssetsPickerController.strings
+  PhotoLock
+
+  Created by 泉华 官 on 15/1/6.
+  Copyright (c) 2015年 CQMH. All rights reserved.
+*/
+
+"Done" = "完成";
+"Cancel"="取消";
+"Photos"="相册";

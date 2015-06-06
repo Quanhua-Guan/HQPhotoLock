@@ -1,0 +1,26 @@
+PODS:
+  - CTAssetsPickerController (2.8.0)
+  - FMDB (2.4):
+    - FMDB/standard (= 2.4)
+  - FMDB/common (2.4)
+  - FMDB/standard (2.4):
+    - FMDB/common
+  - SVProgressHUD (1.1.2)
+  - UIActionSheet+Blocks (0.8.1)
+  - UIAlertView+Blocks (0.8.1)
+
+DEPENDENCIES:
+  - CTAssetsPickerController
+  - FMDB
+  - SVProgressHUD
+  - UIActionSheet+Blocks
+  - UIAlertView+Blocks
+
+SPEC CHECKSUMS:
+  CTAssetsPickerController: 32b02079e2dd41c76fbc63740f4638ced71b7d1b
+  FMDB: 0b2fa25e5264ef177973c0cb8c02c711107979aa
+  SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
+  UIActionSheet+Blocks: c8b9c02f3d08964e8f7a4202f004a639c15eab80
+  UIAlertView+Blocks: 0b749f1f7bd5131ff2233b30a406c1585a7171b2
+
+COCOAPODS: 0.35.0
