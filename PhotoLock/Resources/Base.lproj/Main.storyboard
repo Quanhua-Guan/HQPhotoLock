@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jbt-gD-bC4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jbt-gD-bC4">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -23,14 +23,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="wx1-no-H9l">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnj-iC-d6S">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnj-iC-d6S" customClass="BorderView" customModule="PhotoLock" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <button opaque="NO" tag="9001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNB-V8-ZPs" userLabel="1">
+                                    <button opaque="NO" tag="9001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNB-V8-ZPs" userLabel="1" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
-                                        <state key="normal">
+                                        <state key="normal" image="tapGesture">
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </state>
@@ -38,7 +37,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="FJB-hu-Tfo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O32-sT-TLN" userLabel="2">
+                                    <button opaque="NO" tag="9002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O32-sT-TLN" userLabel="2" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="150" y="0.0" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -50,7 +49,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="S15-NO-zp8"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpM-8l-lGF" userLabel="3">
+                                    <button opaque="NO" tag="9003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpM-8l-lGF" userLabel="3" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="300" y="0.0" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -62,7 +61,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="OhE-zc-9wq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3V3-PS-1dA" userLabel="4">
+                                    <button opaque="NO" tag="9004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3V3-PS-1dA" userLabel="4" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="450" y="0.0" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -74,7 +73,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="ox5-AR-Vvc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGa-IF-HgU" userLabel="5">
+                                    <button opaque="NO" tag="9005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGa-IF-HgU" userLabel="5" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="86" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -86,7 +85,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="jtP-I9-CUr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ln-a0-JuW" userLabel="6">
+                                    <button opaque="NO" tag="9006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ln-a0-JuW" userLabel="6" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="150" y="86" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -98,7 +97,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="9vm-bY-2Jo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsp-OH-LJj" userLabel="7">
+                                    <button opaque="NO" tag="9007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsp-OH-LJj" userLabel="7" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="300" y="86" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -110,7 +109,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="5E0-DF-F5u"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9008" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh9-HV-Cy1" userLabel="8">
+                                    <button opaque="NO" tag="9008" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh9-HV-Cy1" userLabel="8" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="450" y="86" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -122,7 +121,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="bIV-yM-hzQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9009" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeR-G6-DhH" userLabel="1">
+                                    <button opaque="NO" tag="9009" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeR-G6-DhH" userLabel="1" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="172" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -134,7 +133,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="1Ei-UH-QnW"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9010" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3su-bV-Lcy" userLabel="2">
+                                    <button opaque="NO" tag="9010" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3su-bV-Lcy" userLabel="2" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="150" y="172" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -146,7 +145,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="OWm-rU-9Rt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9011" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdO-FI-jCO" userLabel="3">
+                                    <button opaque="NO" tag="9011" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdO-FI-jCO" userLabel="3" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="300" y="172" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -158,7 +157,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="8ay-be-zEg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9012" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5s-QF-LIW" userLabel="4">
+                                    <button opaque="NO" tag="9012" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5s-QF-LIW" userLabel="4" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="450" y="172" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -170,7 +169,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="DO4-St-T3f"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9013" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhY-ox-HKt" userLabel="5">
+                                    <button opaque="NO" tag="9013" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhY-ox-HKt" userLabel="5" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="258" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -182,7 +181,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="yUo-8U-wco"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9014" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euD-8T-pWN" userLabel="6">
+                                    <button opaque="NO" tag="9014" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euD-8T-pWN" userLabel="6" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="150" y="258" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -194,7 +193,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="mmg-ze-I4r"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9015" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOf-s3-9CX" userLabel="7">
+                                    <button opaque="NO" tag="9015" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOf-s3-9CX" userLabel="7" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="300" y="258" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -206,7 +205,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="sQe-vy-h8H"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9016" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvc-w4-nH7" userLabel="8">
+                                    <button opaque="NO" tag="9016" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvc-w4-nH7" userLabel="8" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="450" y="258" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -218,7 +217,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="Awz-fB-U03"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9017" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6X-bG-sah" userLabel="1">
+                                    <button opaque="NO" tag="9017" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6X-bG-sah" userLabel="1" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="344" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -230,7 +229,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="aST-nl-vcI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9018" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uaf-NE-m6h" userLabel="2">
+                                    <button opaque="NO" tag="9018" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uaf-NE-m6h" userLabel="2" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="150" y="344" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -242,7 +241,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="3rk-wN-5oc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9019" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHc-tH-MBM" userLabel="3">
+                                    <button opaque="NO" tag="9019" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHc-tH-MBM" userLabel="3" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="300" y="344" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -254,7 +253,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="9aB-lB-sQ9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9020" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lz7-7f-Ja7" userLabel="4">
+                                    <button opaque="NO" tag="9020" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lz7-7f-Ja7" userLabel="4" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="450" y="344" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -266,7 +265,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="l0H-Wu-7eo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9021" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAY-cH-VqB" userLabel="5">
+                                    <button opaque="NO" tag="9021" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAY-cH-VqB" userLabel="5" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="430" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -278,7 +277,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="q96-65-d6l"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9022" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3h-ed-dJV" userLabel="6">
+                                    <button opaque="NO" tag="9022" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3h-ed-dJV" userLabel="6" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="150" y="430" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -290,7 +289,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="1xx-Oz-0uK"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9023" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iW-0X-VLt" userLabel="7">
+                                    <button opaque="NO" tag="9023" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iW-0X-VLt" userLabel="7" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="300" y="430" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -302,7 +301,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="cL7-lU-SFQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9024" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fA7-ck-nKn" userLabel="8">
+                                    <button opaque="NO" tag="9024" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fA7-ck-nKn" userLabel="8" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="450" y="430" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -314,7 +313,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="N5l-wH-eKH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9025" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usE-0t-X4I" userLabel="5">
+                                    <button opaque="NO" tag="9025" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usE-0t-X4I" userLabel="5" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="516" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -326,7 +325,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="yJQ-GQ-w63"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9026" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aP8-FI-KMW" userLabel="6">
+                                    <button opaque="NO" tag="9026" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aP8-FI-KMW" userLabel="6" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="150" y="516" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -338,7 +337,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="Ud4-MT-bnn"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9027" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zx5-DS-mJL" userLabel="7">
+                                    <button opaque="NO" tag="9027" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zx5-DS-mJL" userLabel="7" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="300" y="516" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -350,7 +349,7 @@
                                             <action selector="passwordInputChanged:" destination="Jbt-gD-bC4" eventType="touchDown" id="ayg-ze-7KP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9028" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2O-Lx-y6o" userLabel="8">
+                                    <button opaque="NO" tag="9028" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2O-Lx-y6o" userLabel="8" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="450" y="516" width="150" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -494,12 +493,13 @@
                     </view>
                     <connections>
                         <outlet property="containerView" destination="tnj-iC-d6S" id="LZ7-6l-1mm"/>
+                        <outlet property="defaultPasswordButton" destination="dNB-V8-ZPs" id="fNP-W9-52f"/>
                         <segue destination="g6E-6U-lFb" kind="presentation" identifier="showMainMenu" modalTransitionStyle="flipHorizontal" id="mJa-th-Rkt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7af-uR-WRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1050" y="426"/>
+            <point key="canvasLocation" x="-770" y="396"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rny-Oo-VRF">
@@ -515,7 +515,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Lo-Mi-XmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-323" y="426"/>
+            <point key="canvasLocation" x="-43" y="396"/>
         </scene>
         <!--Albums-->
         <scene sceneID="jIm-1z-Hrn">
@@ -529,9 +529,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="GjM-Bf-Eai">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zLl-aL-eVP">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PhotoLockTableViewCell" rowHeight="80" id="dfe-uA-09N">
                                         <rect key="frame" x="0.0" y="260" width="600" height="80"/>
@@ -539,21 +543,23 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dfe-uA-09N" id="Ctz-l6-u6Z">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="First album" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ona-wh-Zok">
-                                                    <rect key="frame" x="87" y="8" width="472" height="64"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First album" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ona-wh-Zok">
+                                                    <rect key="frame" x="79" y="8" width="480" height="63"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" tag="1001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PHOTO64" translatesAutoresizingMaskIntoConstraints="NO" id="kkN-Au-Dsf">
-                                                    <rect key="frame" x="15" y="8" width="64" height="64"/>
+                                                <imageView userInteractionEnabled="NO" tag="1001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PHOTO64" translatesAutoresizingMaskIntoConstraints="NO" id="kkN-Au-Dsf">
+                                                    <rect key="frame" x="8" y="8" width="63" height="63"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="kkN-Au-Dsf" secondAttribute="height" multiplier="1:1" id="OWI-xa-h6w"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="kkN-Au-Dsf" firstAttribute="leading" secondItem="Ctz-l6-u6Z" secondAttribute="leadingMargin" constant="7" id="EDd-A3-ZVg"/>
+                                                <constraint firstItem="kkN-Au-Dsf" firstAttribute="leading" secondItem="Ctz-l6-u6Z" secondAttribute="leadingMargin" id="EDd-A3-ZVg"/>
                                                 <constraint firstItem="kkN-Au-Dsf" firstAttribute="bottom" secondItem="Ctz-l6-u6Z" secondAttribute="bottomMargin" id="HfA-UG-LJl"/>
                                                 <constraint firstItem="ona-wh-Zok" firstAttribute="height" secondItem="kkN-Au-Dsf" secondAttribute="height" id="IyU-No-TjK"/>
                                                 <constraint firstItem="ona-wh-Zok" firstAttribute="leading" secondItem="kkN-Au-Dsf" secondAttribute="trailing" constant="8" id="beV-Ua-n9H"/>
@@ -562,6 +568,7 @@
                                                 <constraint firstItem="kkN-Au-Dsf" firstAttribute="top" secondItem="Ctz-l6-u6Z" secondAttribute="topMargin" id="xOl-fm-TbL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <segue destination="Ndp-yf-Qbd" kind="show" identifier="showAlbum" id="d46-59-wBE"/>
@@ -574,7 +581,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3w-hI-tJ2" customClass="GADBannerView">
-                                <rect key="frame" x="140" y="550" width="320" height="50"/>
+                                <rect key="frame" x="140" y="600" width="320" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="Ghp-EO-8fQ"/>
@@ -582,13 +589,17 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.68235296010000002" green="0.85490202900000001" blue="0.85098046059999999" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
+                            <constraint firstAttribute="width" secondItem="GjM-Bf-Eai" secondAttribute="width" id="KbL-To-RZ9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zLl-aL-eVP" secondAttribute="trailing" constant="-16" id="P8O-pu-bMN"/>
                             <constraint firstItem="c3w-hI-tJ2" firstAttribute="top" secondItem="zLl-aL-eVP" secondAttribute="bottom" id="PAt-zV-fu7"/>
-                            <constraint firstItem="tnq-vL-e7C" firstAttribute="top" secondItem="c3w-hI-tJ2" secondAttribute="bottom" id="ZbA-BP-Wdc"/>
-                            <constraint firstItem="zLl-aL-eVP" firstAttribute="top" secondItem="Azx-oQ-7hp" secondAttribute="topMargin" id="jj1-OZ-kpB"/>
+                            <constraint firstAttribute="centerX" secondItem="GjM-Bf-Eai" secondAttribute="centerX" id="QxI-8b-e9w"/>
+                            <constraint firstAttribute="height" secondItem="GjM-Bf-Eai" secondAttribute="height" id="Ti4-a0-C3D"/>
+                            <constraint firstAttribute="centerY" secondItem="GjM-Bf-Eai" secondAttribute="centerY" id="UCq-a3-s3d"/>
+                            <constraint firstItem="tnq-vL-e7C" firstAttribute="top" secondItem="c3w-hI-tJ2" secondAttribute="bottom" constant="-50" id="ZbA-BP-Wdc"/>
                             <constraint firstItem="zLl-aL-eVP" firstAttribute="leading" secondItem="Azx-oQ-7hp" secondAttribute="leadingMargin" constant="-16" id="nGy-Th-Aer"/>
+                            <constraint firstItem="zLl-aL-eVP" firstAttribute="top" secondItem="PpB-fP-Bet" secondAttribute="bottom" id="uY3-kp-G6t"/>
                             <constraint firstAttribute="centerX" secondItem="c3w-hI-tJ2" secondAttribute="centerX" id="vjB-A2-w4h"/>
                         </constraints>
                     </view>
@@ -600,7 +611,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="Settings" id="fnX-In-2OD">
                             <connections>
-                                <segue destination="Qr2-SR-eTU" kind="show" identifier="goSettings" id="vFr-Dz-AGq"/>
+                                <segue destination="QFz-JJ-jrC" kind="show" identifier="goSettings" id="SoE-Lt-RGG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -614,23 +625,31 @@
             <point key="canvasLocation" x="685" y="396"/>
         </scene>
         <!--Settings-->
-        <scene sceneID="a5x-1b-hOY">
+        <scene sceneID="BRr-YJ-05g">
             <objects>
-                <tableViewController id="Qr2-SR-eTU" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VyZ-St-PPn">
+                <viewController id="QFz-JJ-jrC" customClass="SettingsViewController" customModule="PhotoLock" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1D2-kX-Hxg"/>
+                        <viewControllerLayoutGuide type="bottom" id="n0o-3g-kC5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mcf-NF-ohS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                        <sections>
-                            <tableViewSection headerTitle=" " id="LBy-lu-l6F">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="hJn-EA-j4K">
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="nZ6-fp-jnD">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="fTE-73-QzT">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="changePassword" rowHeight="50" id="HAn-KI-2bE">
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hJn-EA-j4K" id="5xs-1r-auP">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HAn-KI-2bE" id="S8f-Ic-8Ve">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change password" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InN-0q-TOE">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change password" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uk-v0-dBK">
                                                     <rect key="frame" x="8" y="0.0" width="584" height="50"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -640,28 +659,40 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="InN-0q-TOE" secondAttribute="bottom" constant="-8" id="IKU-HR-NxA"/>
-                                                <constraint firstItem="InN-0q-TOE" firstAttribute="top" secondItem="5xs-1r-auP" secondAttribute="topMargin" constant="-8" id="QZP-yP-4fc"/>
-                                                <constraint firstItem="InN-0q-TOE" firstAttribute="leading" secondItem="5xs-1r-auP" secondAttribute="leadingMargin" id="Vjt-to-wgY"/>
-                                                <constraint firstItem="InN-0q-TOE" firstAttribute="trailing" secondItem="5xs-1r-auP" secondAttribute="trailingMargin" id="Yap-gr-KpS"/>
+                                                <constraint firstItem="6uk-v0-dBK" firstAttribute="top" secondItem="S8f-Ic-8Ve" secondAttribute="topMargin" constant="-8" id="02I-3A-f6m"/>
+                                                <constraint firstItem="6uk-v0-dBK" firstAttribute="trailing" secondItem="S8f-Ic-8Ve" secondAttribute="trailingMargin" id="DLv-2K-hto"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6uk-v0-dBK" secondAttribute="bottom" constant="-8" id="jmH-I5-PU4"/>
+                                                <constraint firstItem="6uk-v0-dBK" firstAttribute="leading" secondItem="S8f-Ic-8Ve" secondAttribute="leadingMargin" id="pBO-O2-xMY"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="LMT-rM-8Sw" kind="show" id="e6Y-bh-fsc"/>
+                                            <segue destination="LMT-rM-8Sw" kind="show" id="fIF-ux-iPU"/>
                                         </connections>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="Qr2-SR-eTU" id="MNc-vA-dyp"/>
-                            <outlet property="delegate" destination="Qr2-SR-eTU" id="mfi-Dq-xLd"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="UlV-wk-4uK"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dmf-qF-yoE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QFz-JJ-jrC" id="VIE-YB-xuz"/>
+                                    <outlet property="delegate" destination="QFz-JJ-jrC" id="yNc-J4-jn6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fTE-73-QzT" firstAttribute="leading" secondItem="Mcf-NF-ohS" secondAttribute="leadingMargin" constant="-16" id="6z0-Bx-Vny"/>
+                            <constraint firstAttribute="centerX" secondItem="nZ6-fp-jnD" secondAttribute="centerX" id="8nj-En-wJT"/>
+                            <constraint firstItem="n0o-3g-kC5" firstAttribute="top" secondItem="fTE-73-QzT" secondAttribute="bottom" id="9J3-Wr-aF5"/>
+                            <constraint firstItem="nZ6-fp-jnD" firstAttribute="width" secondItem="Mcf-NF-ohS" secondAttribute="width" id="9LN-eL-ZJg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fTE-73-QzT" secondAttribute="trailing" constant="-16" id="No8-aD-ncr"/>
+                            <constraint firstAttribute="centerY" secondItem="nZ6-fp-jnD" secondAttribute="centerY" id="PR2-2V-F5n"/>
+                            <constraint firstItem="fTE-73-QzT" firstAttribute="top" secondItem="1D2-kX-Hxg" secondAttribute="bottom" id="Zhi-uJ-Xzr"/>
+                            <constraint firstItem="nZ6-fp-jnD" firstAttribute="height" secondItem="Mcf-NF-ohS" secondAttribute="height" id="a2V-dg-56k"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="OhV-3K-gPw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Da7-HC-xcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1485" y="-232"/>
         </scene>
@@ -680,10 +711,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="8UU-ri-WBQ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bal-9O-sPu">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bal-9O-sPu" customClass="BorderView" customModule="PhotoLock" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
-                                    <button opaque="NO" tag="9001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Nc-RG-yBc" userLabel="1">
+                                    <button opaque="NO" tag="9001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Nc-RG-yBc" userLabel="1" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -695,7 +726,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="P1q-Z3-VsU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxs-av-GuI" userLabel="2">
+                                    <button opaque="NO" tag="9002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxs-av-GuI" userLabel="2" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="150" y="0.0" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -707,7 +738,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="hOV-aE-LeP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbR-ax-vPp" userLabel="3">
+                                    <button opaque="NO" tag="9003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbR-ax-vPp" userLabel="3" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="300" y="0.0" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -719,7 +750,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="Y4V-L8-e6e"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jr8-h3-aFi" userLabel="4">
+                                    <button opaque="NO" tag="9004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jr8-h3-aFi" userLabel="4" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="450" y="0.0" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -731,7 +762,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="JOx-kj-3bf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgn-AF-56v" userLabel="5">
+                                    <button opaque="NO" tag="9005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgn-AF-56v" userLabel="5" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="77" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -743,7 +774,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="3F1-Mc-Bnm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ze-0P-cPH" userLabel="6">
+                                    <button opaque="NO" tag="9006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ze-0P-cPH" userLabel="6" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="150" y="77" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -755,7 +786,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="Egx-bO-Wt0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxF-0l-vHA" userLabel="7">
+                                    <button opaque="NO" tag="9007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxF-0l-vHA" userLabel="7" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="300" y="77" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -767,7 +798,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="l4y-kw-6Te"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9008" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1H2-YW-BPJ" userLabel="8">
+                                    <button opaque="NO" tag="9008" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1H2-YW-BPJ" userLabel="8" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="450" y="77" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -779,7 +810,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="8wr-1c-iRN"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9009" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID7-EY-8X0" userLabel="1">
+                                    <button opaque="NO" tag="9009" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID7-EY-8X0" userLabel="1" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="154" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -791,7 +822,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="uP0-Qv-oTE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9010" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTX-Mk-g37" userLabel="2">
+                                    <button opaque="NO" tag="9010" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTX-Mk-g37" userLabel="2" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="150" y="154" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -803,7 +834,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="tod-sn-McR"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9011" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69V-ED-twE" userLabel="3">
+                                    <button opaque="NO" tag="9011" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69V-ED-twE" userLabel="3" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="300" y="154" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -815,7 +846,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="11E-fa-hgv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9012" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pK-iC-N4x" userLabel="4">
+                                    <button opaque="NO" tag="9012" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pK-iC-N4x" userLabel="4" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="450" y="154" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -827,7 +858,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="m98-k7-SMb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9013" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1d8-60-tcR" userLabel="5">
+                                    <button opaque="NO" tag="9013" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1d8-60-tcR" userLabel="5" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="231" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -839,7 +870,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="TkW-Nw-bbU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9014" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nu4-6g-UeB" userLabel="6">
+                                    <button opaque="NO" tag="9014" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nu4-6g-UeB" userLabel="6" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="150" y="231" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -851,7 +882,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="hKC-pd-Bii"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9015" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHb-DS-cSz" userLabel="7">
+                                    <button opaque="NO" tag="9015" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHb-DS-cSz" userLabel="7" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="300" y="231" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -863,7 +894,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="5LY-tH-bt3"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9016" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ2-di-wF4" userLabel="8">
+                                    <button opaque="NO" tag="9016" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ2-di-wF4" userLabel="8" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="450" y="231" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -875,7 +906,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="7oj-70-5oa"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9017" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X51-vx-SWK" userLabel="1">
+                                    <button opaque="NO" tag="9017" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X51-vx-SWK" userLabel="1" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="308" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -887,7 +918,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="1Uo-h7-AWS"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9018" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwv-Dw-xoh" userLabel="2">
+                                    <button opaque="NO" tag="9018" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwv-Dw-xoh" userLabel="2" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="150" y="308" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -899,7 +930,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="RF8-ES-Wbf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9019" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iN-gr-YFS" userLabel="3">
+                                    <button opaque="NO" tag="9019" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iN-gr-YFS" userLabel="3" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="300" y="308" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -911,7 +942,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="RR1-Aw-6Ge"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9020" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4Q-Rb-OJi" userLabel="4">
+                                    <button opaque="NO" tag="9020" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4Q-Rb-OJi" userLabel="4" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="450" y="308" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -923,7 +954,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="u1C-Q2-7uE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9021" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvA-Uw-2cv" userLabel="5">
+                                    <button opaque="NO" tag="9021" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvA-Uw-2cv" userLabel="5" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="385" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -935,7 +966,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="daI-nX-fDM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9022" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Py-wP-EXE" userLabel="6">
+                                    <button opaque="NO" tag="9022" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Py-wP-EXE" userLabel="6" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="150" y="385" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -947,7 +978,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="QQC-x0-R7C"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9023" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5F-YG-FQt" userLabel="7">
+                                    <button opaque="NO" tag="9023" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5F-YG-FQt" userLabel="7" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="300" y="385" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -959,7 +990,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="tYp-wh-ciI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9024" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxf-TO-sM8" userLabel="8">
+                                    <button opaque="NO" tag="9024" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxf-TO-sM8" userLabel="8" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="450" y="385" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -971,7 +1002,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="3qX-lI-MvM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9025" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="028-ly-3yH" userLabel="5">
+                                    <button opaque="NO" tag="9025" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="028-ly-3yH" userLabel="5" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="462" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -983,7 +1014,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="4AW-HG-u0F"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9026" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7w-7W-iS9" userLabel="6">
+                                    <button opaque="NO" tag="9026" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7w-7W-iS9" userLabel="6" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="150" y="462" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -995,7 +1026,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="eFM-kW-adt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9027" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0E-X3-yEi" userLabel="7">
+                                    <button opaque="NO" tag="9027" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0E-X3-yEi" userLabel="7" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="300" y="462" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -1007,7 +1038,7 @@
                                             <action selector="passwordInputChanged:" destination="LMT-rM-8Sw" eventType="touchUpInside" id="a4k-rV-eMf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9028" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JlR-yd-O0T" userLabel="8">
+                                    <button opaque="NO" tag="9028" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JlR-yd-O0T" userLabel="8" customClass="RectBorderButton" customModule="PhotoLock" customModuleProvider="target">
                                         <rect key="frame" x="450" y="462" width="150" height="77"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -1205,9 +1236,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="B9R-CG-W8v">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wN5-Vw-jbE">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="8" maxX="0.0" maxY="0.0"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="k9w-Sg-a0r">
                                     <size key="itemSize" width="100" height="100"/>
@@ -1235,6 +1269,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="0ee-R1-oa9" firstAttribute="leading" secondItem="foo-nL-vI8" secondAttribute="leadingMargin" constant="-8" id="Dl3-ds-V4b"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="0ee-R1-oa9" secondAttribute="trailing" constant="-8" id="EWQ-iy-olH"/>
@@ -1254,9 +1289,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="B9R-CG-W8v" secondAttribute="centerY" id="0kX-ZB-ztO"/>
+                            <constraint firstItem="wN5-Vw-jbE" firstAttribute="top" secondItem="oL5-sf-Dao" secondAttribute="bottom" id="AHX-6f-zdA"/>
                             <constraint firstAttribute="centerX" secondItem="wN5-Vw-jbE" secondAttribute="centerX" id="LId-z9-9ey"/>
-                            <constraint firstItem="wN5-Vw-jbE" firstAttribute="top" secondItem="gnh-PS-7g4" secondAttribute="topMargin" id="VRq-Xf-3Iu"/>
+                            <constraint firstAttribute="width" secondItem="B9R-CG-W8v" secondAttribute="width" id="XcM-wI-Fcu"/>
+                            <constraint firstAttribute="centerX" secondItem="B9R-CG-W8v" secondAttribute="centerX" id="ePc-IZ-BBu"/>
                             <constraint firstItem="qRv-a5-V6y" firstAttribute="top" secondItem="wN5-Vw-jbE" secondAttribute="bottom" id="hpV-bY-FAi"/>
+                            <constraint firstAttribute="height" secondItem="B9R-CG-W8v" secondAttribute="height" id="jCs-3i-feK"/>
                             <constraint firstAttribute="width" secondItem="wN5-Vw-jbE" secondAttribute="width" id="wYU-aI-n8Q"/>
                         </constraints>
                     </view>
@@ -1305,6 +1344,8 @@
         <image name="PHOTO64" width="64" height="64"/>
         <image name="PhotosHintImage" width="480" height="480"/>
         <image name="Settings" width="20" height="20"/>
+        <image name="bg" width="320" height="568"/>
         <image name="bg3" width="640" height="1136"/>
+        <image name="tapGesture" width="300" height="300"/>
     </resources>
 </document>

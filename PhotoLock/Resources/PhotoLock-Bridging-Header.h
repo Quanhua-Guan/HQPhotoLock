@@ -2,6 +2,7 @@
 //  Use this file to import your target's public headers that you would like to expose to Swift.
 //
 
+#import <GoogleMobileAds/GoogleMobileAds.h>
 #import "Base.h"
 #import "BaseDBMasterKey.h"
 #import "Album.h"
@@ -17,5 +18,4 @@
 #import "UIImage+FixOrientation.h"
 #import "NSString+AESCrypt.h"
 #import "CommonUtilities.h"
-#import "GADBannerView.h"
-#import "GADRequest.h"
+#import "Masonry.h"

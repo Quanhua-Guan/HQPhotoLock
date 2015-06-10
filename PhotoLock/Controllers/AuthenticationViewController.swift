@@ -10,6 +10,7 @@ import UIKit
 
 private let alpha = 0.06 as CGFloat
 private let showColor = UIColor(red: 252.0 / 255.0, green: 72.0 / 255.0, blue: 72.0 / 255.0, alpha: 0.70)
+private let defaultPass = "1000000000000000000000000000";
 
 class AuthenticationViewController: UIViewController {
     
@@ -18,6 +19,7 @@ class AuthenticationViewController: UIViewController {
     var passwords: [Bool]!
     var passwordsInput: [Bool]!
     var user: User!
+    @IBOutlet weak var defaultPasswordButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,7 @@ class AuthenticationViewController: UIViewController {
         if results == nil {
             user = User()
             user.username = "root"
-            user.password = ("1000000000000000000000000000" as NSString).AES256EncryptWithKey(passwordForEncryptPassword)
+            user.password = (defaultPass as NSString).AES256EncryptWithKey(passwordForEncryptPassword)
             DBMasterKey.add(user)
         } else {
             user = results.firstObject as! User
@@ -40,6 +42,15 @@ class AuthenticationViewController: UIViewController {
             passwordsInput.append(false)
             passwords.append(flag == "0" ? false : true)
             containerView.viewWithTag(9000 + i + 1)?.backgroundColor = UIColor.randomColor(alpha: alpha)
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if (user.password == defaultPass) {
+            defaultPasswordButton.setImage(UIImage(named: "tapGesture"), forState: .Normal)
+        } else {
+            defaultPasswordButton.setImage(nil, forState: .Normal)
         }
     }
         
@@ -86,6 +97,14 @@ class AuthenticationViewController: UIViewController {
             })
         } else {
             self.performSegueWithIdentifier(SegueIdentifierShowMainMenu, sender: nil)
+        }
+        
+        self.showAllert()
+    }
+    
+    func showAllert() {
+        if (user.password == defaultPass) {
+            UIAlertView(title: NSLocalizedString("Tip", comment: ""), message: NSLocalizedString("Please change your password ASAP!", comment: ""), delegate: nil, cancelButtonTitle: NSLocalizedString("OK", comment: "")).show()
         }
     }
     

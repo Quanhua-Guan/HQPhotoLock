@@ -23,25 +23,24 @@ CTAssetsPickerController is an iOS controller that allows picking multiple photo
 ## Minimum Requirement
 Xcode 5 and iOS 7.
 
-## Installation
+## Adding to your project
+[CocoaPods](http://cocoapods.org) is a very good library dependencies manager. Just create the Podfile and it does all the remaining works.  
 
-### via [CocoaPods](http://cocoapods.org)
-
-````bash
-$ edit Podfile
+Podfile
+````
 platform :ios, '7.0'
-pod 'CTAssetsPickerController',  '~> 2.8.0'
-$ pod install
+pod 'CTAssetsPickerController',  '~> 2.9.0'
 ````
-* Use the Xcode workspace instead of the project.
 
-### via Git Submodules
+*If you manually manage your libraries, this contol can also be used via git submodule but you have to create resource bundle by yourself. Please see [submodules notes](SUBMODULES-NOTES.md) for the details.*
 
+## Running the demo app
+
+To run the demo app, you have to run `pod install` and then open `CTAssetsPickerDemo.xcworkspace`
 ````bash
-$ git submodule add http://github.com/chiunam/CTAssetsPickerController
+git clone https://github.com/chiunam/CTAssetsPickerController/
+pod install
 ````
-1. Drag `CTAssetsPickerController` folder in your project and add to your targets.
-2. Add `AssetsLibrary.framework` and `MediaPlayer.framework`.
 
 ## Simple Uses
 

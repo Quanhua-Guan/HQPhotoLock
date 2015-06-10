@@ -15,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        UINavigationBar.appearance().barStyle = UIBarStyle.BlackTranslucent
+        UINavigationBar.appearance().backgroundColor = Color.skyBlueColor()
+        UINavigationBar.appearance().tintColor = Color.whiteColor()
+        
         SVProgressHUD.setBackgroundColor(UIColor(patternImage: UIImage(named: "HUDBackground")!))
         SVProgressHUD.setForegroundColor(UIColor(red: 0.0, green: 0.8, blue: 1.0, alpha: 1.0))
         

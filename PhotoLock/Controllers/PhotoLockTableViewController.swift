@@ -21,7 +21,7 @@ class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         hintImageView = UIImageView(image: UIImage(named:"AlbumsHintImage"))
         hintImageView.frame = CGRectMake(0, 50, self.view.bounds.size.width, self.view.bounds.size.width)
         hintImageView.contentMode = UIViewContentMode.ScaleAspectFit
@@ -151,6 +151,10 @@ class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
        
     }

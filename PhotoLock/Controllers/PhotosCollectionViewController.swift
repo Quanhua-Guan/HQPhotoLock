@@ -416,7 +416,6 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
     }
     
     func assetsPickerControllerDidCancel(picker: CTAssetsPickerController!) {
-        picker.dismissViewControllerAnimated(true, completion: nil)
     }
 
     // MARK: - ImportPhotosFromFileSharingViewControllerDelegate
