@@ -99,7 +99,6 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
             self.importPhotoButtonItem.enabled = false
             self.navigationController?.setToolbarHidden(false, animated: true)
             //
-            collectionViewBottomMargin.constant = -bottomLayoutGuide.length
             UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
                 self.view.layoutIfNeeded()
                 }, completion: nil)
@@ -480,7 +479,7 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
                         self.photos.append(photo)
                         self.photosSelected.append(false)
                         // 删除文件
-                        fm.removeItemAtPath(file, error: nil)
+                        //testing//fm.removeItemAtPath(file, error: nil)
                     } else {
                         errorOccours = true
                     }

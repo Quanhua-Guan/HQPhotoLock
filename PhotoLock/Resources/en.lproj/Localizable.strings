@@ -6,6 +6,12 @@
   Copyright (c) 2015年 CQMH. All rights reserved.
 */
 
+"Share THIS" = "Share \"THIS\"!";
+"Share THIS %d times to remove AD!" = "Share \"THIS\" %d times to remove AD!";
+"Service unavailable" = "Service unavailable";
+"SharingText" = "I recomend \"THIS\"!!! \"THIS\" is a super strongbox for photos!";
+"SharingURL" = "https://itunes.apple.com/cn/app/tu-suo-hq/id952647119?mt=8";
+
 "Please change your password ASAP!" = "Please change your password ASAP!";
 "Old Password"="Old Password";
 "Please enter your old password"="Please enter your old password";

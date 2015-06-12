@@ -1,24 +1,27 @@
 
-/* Class = "IBUINavigationItem"; title = "Set password"; ObjectID = "6AI-SD-VHM"; */
+/* Class = "UINavigationItem"; title = "Set password"; ObjectID = "6AI-SD-VHM"; */
 "6AI-SD-VHM.title" = "设置密码";
 
-/* Class = "IBUILabel"; text = "Change password"; ObjectID = "InN-0q-TOE"; */
-"InN-0q-TOE.text" = "修改密码";
+/* Class = "UILabel"; text = "Change password"; ObjectID = "6uk-v0-dBK"; */
+"6uk-v0-dBK.text" = "修改密码";
 
-/* Class = "IBUITableViewSection"; headerTitle = " "; ObjectID = "LBy-lu-l6F"; */
-"LBy-lu-l6F.headerTitle" = " ";
+/* Class = "UIViewController"; title = "密码设置"; ObjectID = "LMT-rM-8Sw"; */
+"LMT-rM-8Sw.title" = "设置密码";
 
-/* Class = "IBUIViewController"; title = "密码设置"; ObjectID = "LMT-rM-8Sw"; */
-"LMT-rM-8Sw.title" = "密码设置";
+/* Class = "UINavigationItem"; title = "Photos"; ObjectID = "LTP-Ym-qPH"; */
+"LTP-Ym-qPH.title" = "相册";
 
-/* Class = "IBUINavigationItem"; title = "Photos"; ObjectID = "LTP-Ym-qPH"; */
-"LTP-Ym-qPH.title" = "图片";
+/* Class = "UINavigationItem"; title = "Albums"; ObjectID = "MSe-V8-OzI"; */
+"MSe-V8-OzI.title" = "这个";
 
-/* Class = "IBUINavigationItem"; title = "Albums"; ObjectID = "MSe-V8-OzI"; */
-"MSe-V8-OzI.title" = "相册";
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "OhV-3K-gPw"; */
+"OhV-3K-gPw.title" = "设置";
 
-/* Class = "IBUINavigationItem"; title = "Settings"; ObjectID = "UlV-wk-4uK"; */
-"UlV-wk-4uK.title" = "设置";
+/* Class = "UILabel"; text = "Rate THIS"; ObjectID = "UvM-dN-Tkf"; */
+"UvM-dN-Tkf.text" = "赞一下\"这个\"";
 
-/* Class = "IBUILabel"; text = "First album"; ObjectID = "ona-wh-Zok"; */
+/* Class = "UILabel"; text = "Share THIS 5 times to remove AD!"; ObjectID = "i9Z-On-VaE"; */
+"i9Z-On-VaE.text" = "Share THIS 5 times to remove AD!";
+
+/* Class = "UILabel"; text = "First album"; ObjectID = "ona-wh-Zok"; */
 "ona-wh-Zok.text" = "First album";

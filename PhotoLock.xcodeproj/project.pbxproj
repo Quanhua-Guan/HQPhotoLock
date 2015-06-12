@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2716338E1B29CEE300597C43 /* RectBorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2716338D1B29CEE300597C43 /* RectBorderLabel.swift */; };
+		271633AA1B2A6E0400597C43 /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 271633901B2A6E0400597C43 /* UMSocialLocalizable.strings */; };
+		271633AB1B2A6E0400597C43 /* libUMSocial_Sdk_4.2.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2716339E1B2A6E0400597C43 /* libUMSocial_Sdk_4.2.2.a */; };
+		271633AC1B2A6E0400597C43 /* UMSCommentDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271633A01B2A6E0400597C43 /* UMSCommentDetailController.xib */; };
+		271633AD1B2A6E0400597C43 /* UMSCommentInputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271633A11B2A6E0400597C43 /* UMSCommentInputController.xib */; };
+		271633AE1B2A6E0400597C43 /* UMSCommentInputControlleriPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271633A21B2A6E0400597C43 /* UMSCommentInputControlleriPad.xib */; };
+		271633AF1B2A6E0400597C43 /* UMShareEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271633A31B2A6E0400597C43 /* UMShareEditViewController.xib */; };
+		271633B01B2A6E0400597C43 /* UMShareEditViewControlleriPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271633A41B2A6E0400597C43 /* UMShareEditViewControlleriPad.xib */; };
+		271633B11B2A6E0400597C43 /* UMSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271633A51B2A6E0400597C43 /* UMSLoginViewController.xib */; };
+		271633B21B2A6E0400597C43 /* UMSnsAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271633A61B2A6E0400597C43 /* UMSnsAccountViewController.xib */; };
+		271633B31B2A6E0400597C43 /* UMSShareListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271633A71B2A6E0400597C43 /* UMSShareListController.xib */; };
+		271633B41B2A6E0400597C43 /* UMSocialSDKResourcesNew.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 271633A81B2A6E0400597C43 /* UMSocialSDKResourcesNew.bundle */; };
 		272F668B1A494B4C00C44A54 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F668A1A494B4C00C44A54 /* libz.dylib */; };
 		272F668D1A494B5200C44A54 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F668C1A494B5200C44A54 /* libsqlite3.0.dylib */; };
 		279054551A41BDDA00370BC7 /* PhotoLockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279054541A41BDDA00370BC7 /* PhotoLockTests.swift */; };
@@ -16,12 +28,13 @@
 		279054A31A4299C500370BC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2790549A1A4299C500370BC7 /* Images.xcassets */; };
 		27AFFFC51A5BC22C00C8A8B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27AFFFC71A5BC22C00C8A8B9 /* Localizable.strings */; };
 		27AFFFD31A5BC6CA00C8A8B9 /* CTAssetsPickerController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27AFFFD51A5BC6CA00C8A8B9 /* CTAssetsPickerController.strings */; };
+		27CCF2861B2A70E700FEB34E /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CCF2801B2A70E700FEB34E /* GoogleMobileAds.framework */; };
+		27CCF2871B2A70E700FEB34E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 27CCF2851B2A70E700FEB34E /* README.txt */; };
 		27CE7E7A1B2848BC003B2128 /* RectBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE7E791B2848BC003B2128 /* RectBorderButton.swift */; };
 		27CE7E7C1B284A48003B2128 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE7E7B1B284A48003B2128 /* BorderView.swift */; };
 		27CE7E7E1B285416003B2128 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE7E7D1B285416003B2128 /* Colours.swift */; };
-		27CE7E871B285B11003B2128 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CE7E811B285B11003B2128 /* GoogleMobileAds.framework */; };
-		27CE7E881B285B11003B2128 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 27CE7E861B285B11003B2128 /* README.txt */; };
 		27CE7E8A1B285E26003B2128 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE7E891B285E26003B2128 /* NavigationViewController.swift */; };
+		27CE7EC41B291459003B2128 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE7EC31B291459003B2128 /* Settings.swift */; };
 		27EA5FA51A5BE4990073F625 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272F668F1A49589500C44A54 /* Defaults.swift */; };
 		27EA5FA61A5BE4990073F625 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2790548D1A4299C500370BC7 /* AppDelegate.swift */; };
 		27EA5FA81A5BE4990073F625 /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F665F1A49308F00C44A54 /* Base.m */; };
@@ -69,6 +82,30 @@
 		270236761A502F5B00C703B6 /* NSString+AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AESCrypt.h"; sourceTree = "<group>"; };
 		270236771A502F5B00C703B6 /* NSString+AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AESCrypt.m"; sourceTree = "<group>"; };
 		2702367A1A5034C100C703B6 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		2716338D1B29CEE300597C43 /* RectBorderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectBorderLabel.swift; sourceTree = "<group>"; };
+		271633911B2A6E0400597C43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UMSocialLocalizable.strings; sourceTree = "<group>"; };
+		271633931B2A6E0400597C43 /* UMSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocial.h; sourceTree = "<group>"; };
+		271633941B2A6E0400597C43 /* UMSocialAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialAccountManager.h; sourceTree = "<group>"; };
+		271633951B2A6E0400597C43 /* UMSocialBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialBar.h; sourceTree = "<group>"; };
+		271633961B2A6E0400597C43 /* UMSocialConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialConfig.h; sourceTree = "<group>"; };
+		271633971B2A6E0400597C43 /* UMSocialControllerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialControllerService.h; sourceTree = "<group>"; };
+		271633981B2A6E0400597C43 /* UMSocialControllerServiceComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialControllerServiceComment.h; sourceTree = "<group>"; };
+		271633991B2A6E0400597C43 /* UMSocialData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialData.h; sourceTree = "<group>"; };
+		2716339A1B2A6E0400597C43 /* UMSocialDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialDataService.h; sourceTree = "<group>"; };
+		2716339B1B2A6E0400597C43 /* UMSocialSnsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialSnsData.h; sourceTree = "<group>"; };
+		2716339C1B2A6E0400597C43 /* UMSocialSnsPlatformManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialSnsPlatformManager.h; sourceTree = "<group>"; };
+		2716339D1B2A6E0400597C43 /* UMSocialSnsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialSnsService.h; sourceTree = "<group>"; };
+		2716339E1B2A6E0400597C43 /* libUMSocial_Sdk_4.2.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMSocial_Sdk_4.2.2.a; sourceTree = "<group>"; };
+		271633A01B2A6E0400597C43 /* UMSCommentDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMSCommentDetailController.xib; sourceTree = "<group>"; };
+		271633A11B2A6E0400597C43 /* UMSCommentInputController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMSCommentInputController.xib; sourceTree = "<group>"; };
+		271633A21B2A6E0400597C43 /* UMSCommentInputControlleriPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMSCommentInputControlleriPad.xib; sourceTree = "<group>"; };
+		271633A31B2A6E0400597C43 /* UMShareEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMShareEditViewController.xib; sourceTree = "<group>"; };
+		271633A41B2A6E0400597C43 /* UMShareEditViewControlleriPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMShareEditViewControlleriPad.xib; sourceTree = "<group>"; };
+		271633A51B2A6E0400597C43 /* UMSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMSLoginViewController.xib; sourceTree = "<group>"; };
+		271633A61B2A6E0400597C43 /* UMSnsAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMSnsAccountViewController.xib; sourceTree = "<group>"; };
+		271633A71B2A6E0400597C43 /* UMSShareListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMSShareListController.xib; sourceTree = "<group>"; };
+		271633A81B2A6E0400597C43 /* UMSocialSDKResourcesNew.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResourcesNew.bundle; sourceTree = "<group>"; };
+		271633A91B2A6E0400597C43 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/UMSocialLocalizable.strings"; sourceTree = "<group>"; };
 		272F66271A49207E00C44A54 /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
 		272F66281A49207E00C44A54 /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
 		272F665A1A49308F00C44A54 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
@@ -84,9 +121,6 @@
 		272F668F1A49589500C44A54 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		277A355A1A5271EC0030FA22 /* CommonUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtilities.h; sourceTree = "<group>"; };
 		277A355B1A5271EC0030FA22 /* CommonUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtilities.m; sourceTree = "<group>"; };
-		278DBFF41A73364900E41ED9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		278DBFF61A73364B00E41ED9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		278DBFF81A73364D00E41ED9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		279054391A41BDDA00370BC7 /* PhotoLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2790544E1A41BDDA00370BC7 /* PhotoLockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoLockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		279054531A41BDDA00370BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,15 +145,20 @@
 		27AFFFD61A5BC6CC00C8A8B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CTAssetsPickerController.strings; sourceTree = "<group>"; };
 		27AFFFD71A5BC6CC00C8A8B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/CTAssetsPickerController.strings"; sourceTree = "<group>"; };
 		27AFFFD81A5BC6CD00C8A8B9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/CTAssetsPickerController.strings"; sourceTree = "<group>"; };
+		27CCF2801B2A70E700FEB34E /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		27CCF2821B2A70E700FEB34E /* GADMAdNetworkAdapterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdNetworkAdapterProtocol.h; sourceTree = "<group>"; };
+		27CCF2831B2A70E700FEB34E /* GADMAdNetworkConnectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdNetworkConnectorProtocol.h; sourceTree = "<group>"; };
+		27CCF2841B2A70E700FEB34E /* GADMEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMEnums.h; sourceTree = "<group>"; };
+		27CCF2851B2A70E700FEB34E /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		27CCF28B1B2A9B0400FEB34E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		27CCF28C1B2A9B0800FEB34E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		27CCF28D1B2A9B0B00FEB34E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		27CCF28E1B2AA18F00FEB34E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/UMSocialLocalizable.strings"; sourceTree = "<group>"; };
 		27CE7E791B2848BC003B2128 /* RectBorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectBorderButton.swift; sourceTree = "<group>"; };
 		27CE7E7B1B284A48003B2128 /* BorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		27CE7E7D1B285416003B2128 /* Colours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
-		27CE7E811B285B11003B2128 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		27CE7E831B285B11003B2128 /* GADMAdNetworkAdapterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdNetworkAdapterProtocol.h; sourceTree = "<group>"; };
-		27CE7E841B285B11003B2128 /* GADMAdNetworkConnectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdNetworkConnectorProtocol.h; sourceTree = "<group>"; };
-		27CE7E851B285B11003B2128 /* GADMEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMEnums.h; sourceTree = "<group>"; };
-		27CE7E861B285B11003B2128 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		27CE7E891B285E26003B2128 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		27CE7EC31B291459003B2128 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		27EA5FA41A5BE32A0073F625 /* PhotoLock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoLock-Bridging-Header.h"; sourceTree = "<group>"; };
 		27EEE7771A4D8409003094D8 /* ImportPhotosFromFileSharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportPhotosFromFileSharingViewController.swift; sourceTree = "<group>"; };
 		C99390C11EACFD64F2AE1F94 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,7 +171,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				272F668D1A494B5200C44A54 /* libsqlite3.0.dylib in Frameworks */,
-				27CE7E871B285B11003B2128 /* GoogleMobileAds.framework in Frameworks */,
+				271633AB1B2A6E0400597C43 /* libUMSocial_Sdk_4.2.2.a in Frameworks */,
+				27CCF2861B2A70E700FEB34E /* GoogleMobileAds.framework in Frameworks */,
 				272F668B1A494B4C00C44A54 /* libz.dylib in Frameworks */,
 				452B146C9263657F0B584988 /* libPods.a in Frameworks */,
 			);
@@ -155,6 +195,51 @@
 				C99390C11EACFD64F2AE1F94 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2716338F1B2A6E0400597C43 /* UMSocial_Sdk_4.2.2 */ = {
+			isa = PBXGroup;
+			children = (
+				271633901B2A6E0400597C43 /* UMSocialLocalizable.strings */,
+				271633921B2A6E0400597C43 /* Header */,
+				2716339E1B2A6E0400597C43 /* libUMSocial_Sdk_4.2.2.a */,
+				2716339F1B2A6E0400597C43 /* SocialSDKXib */,
+				271633A81B2A6E0400597C43 /* UMSocialSDKResourcesNew.bundle */,
+			);
+			path = UMSocial_Sdk_4.2.2;
+			sourceTree = "<group>";
+		};
+		271633921B2A6E0400597C43 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				271633931B2A6E0400597C43 /* UMSocial.h */,
+				271633941B2A6E0400597C43 /* UMSocialAccountManager.h */,
+				271633951B2A6E0400597C43 /* UMSocialBar.h */,
+				271633961B2A6E0400597C43 /* UMSocialConfig.h */,
+				271633971B2A6E0400597C43 /* UMSocialControllerService.h */,
+				271633981B2A6E0400597C43 /* UMSocialControllerServiceComment.h */,
+				271633991B2A6E0400597C43 /* UMSocialData.h */,
+				2716339A1B2A6E0400597C43 /* UMSocialDataService.h */,
+				2716339B1B2A6E0400597C43 /* UMSocialSnsData.h */,
+				2716339C1B2A6E0400597C43 /* UMSocialSnsPlatformManager.h */,
+				2716339D1B2A6E0400597C43 /* UMSocialSnsService.h */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		2716339F1B2A6E0400597C43 /* SocialSDKXib */ = {
+			isa = PBXGroup;
+			children = (
+				271633A01B2A6E0400597C43 /* UMSCommentDetailController.xib */,
+				271633A11B2A6E0400597C43 /* UMSCommentInputController.xib */,
+				271633A21B2A6E0400597C43 /* UMSCommentInputControlleriPad.xib */,
+				271633A31B2A6E0400597C43 /* UMShareEditViewController.xib */,
+				271633A41B2A6E0400597C43 /* UMShareEditViewControlleriPad.xib */,
+				271633A51B2A6E0400597C43 /* UMSLoginViewController.xib */,
+				271633A61B2A6E0400597C43 /* UMSnsAccountViewController.xib */,
+				271633A71B2A6E0400597C43 /* UMSShareListController.xib */,
+			);
+			path = SocialSDKXib;
 			sourceTree = "<group>";
 		};
 		272F66261A49207E00C44A54 /* Utilities */ = {
@@ -253,6 +338,7 @@
 		2790548C1A4299C500370BC7 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				27CE7EC31B291459003B2128 /* Settings.swift */,
 				272F668F1A49589500C44A54 /* Defaults.swift */,
 				2790548D1A4299C500370BC7 /* AppDelegate.swift */,
 			);
@@ -291,6 +377,7 @@
 		2790549E1A4299C500370BC7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2716338D1B29CEE300597C43 /* RectBorderLabel.swift */,
 				27CE7E791B2848BC003B2128 /* RectBorderButton.swift */,
 				27CE7E7B1B284A48003B2128 /* BorderView.swift */,
 				27CE7E891B285E26003B2128 /* NavigationViewController.swift */,
@@ -307,22 +394,22 @@
 			name = "Storyboards & xibs";
 			sourceTree = "<group>";
 		};
-		27CE7E801B285B11003B2128 /* GoogleMobileAdsSdkiOS-7.3.1 */ = {
+		27CCF27F1B2A70E700FEB34E /* GoogleMobileAdsSdkiOS-7.3.1 */ = {
 			isa = PBXGroup;
 			children = (
-				27CE7E811B285B11003B2128 /* GoogleMobileAds.framework */,
-				27CE7E821B285B11003B2128 /* Mediation Adapters */,
+				27CCF2801B2A70E700FEB34E /* GoogleMobileAds.framework */,
+				27CCF2811B2A70E700FEB34E /* Mediation Adapters */,
 			);
 			path = "GoogleMobileAdsSdkiOS-7.3.1";
 			sourceTree = "<group>";
 		};
-		27CE7E821B285B11003B2128 /* Mediation Adapters */ = {
+		27CCF2811B2A70E700FEB34E /* Mediation Adapters */ = {
 			isa = PBXGroup;
 			children = (
-				27CE7E831B285B11003B2128 /* GADMAdNetworkAdapterProtocol.h */,
-				27CE7E841B285B11003B2128 /* GADMAdNetworkConnectorProtocol.h */,
-				27CE7E851B285B11003B2128 /* GADMEnums.h */,
-				27CE7E861B285B11003B2128 /* README.txt */,
+				27CCF2821B2A70E700FEB34E /* GADMAdNetworkAdapterProtocol.h */,
+				27CCF2831B2A70E700FEB34E /* GADMAdNetworkConnectorProtocol.h */,
+				27CCF2841B2A70E700FEB34E /* GADMEnums.h */,
+				27CCF2851B2A70E700FEB34E /* README.txt */,
 			);
 			path = "Mediation Adapters";
 			sourceTree = "<group>";
@@ -331,7 +418,8 @@
 			isa = PBXGroup;
 			children = (
 				27CE7E7D1B285416003B2128 /* Colours.swift */,
-				27CE7E801B285B11003B2128 /* GoogleMobileAdsSdkiOS-7.3.1 */,
+				2716338F1B2A6E0400597C43 /* UMSocial_Sdk_4.2.2 */,
+				27CCF27F1B2A70E700FEB34E /* GoogleMobileAdsSdkiOS-7.3.1 */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";
@@ -439,12 +527,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271633AD1B2A6E0400597C43 /* UMSCommentInputController.xib in Resources */,
+				271633AE1B2A6E0400597C43 /* UMSCommentInputControlleriPad.xib in Resources */,
+				271633AA1B2A6E0400597C43 /* UMSocialLocalizable.strings in Resources */,
+				27CCF2871B2A70E700FEB34E /* README.txt in Resources */,
+				271633B01B2A6E0400597C43 /* UMShareEditViewControlleriPad.xib in Resources */,
 				27AFFFD31A5BC6CA00C8A8B9 /* CTAssetsPickerController.strings in Resources */,
+				271633AF1B2A6E0400597C43 /* UMShareEditViewController.xib in Resources */,
 				27AFFFC51A5BC22C00C8A8B9 /* Localizable.strings in Resources */,
 				279054A21A4299C500370BC7 /* Main.storyboard in Resources */,
+				271633B41B2A6E0400597C43 /* UMSocialSDKResourcesNew.bundle in Resources */,
 				279054A31A4299C500370BC7 /* Images.xcassets in Resources */,
+				271633B11B2A6E0400597C43 /* UMSLoginViewController.xib in Resources */,
+				271633B21B2A6E0400597C43 /* UMSnsAccountViewController.xib in Resources */,
+				271633AC1B2A6E0400597C43 /* UMSCommentDetailController.xib in Resources */,
+				271633B31B2A6E0400597C43 /* UMSShareListController.xib in Resources */,
 				279054A11A4299C500370BC7 /* LaunchScreen.xib in Resources */,
-				27CE7E881B285B11003B2128 /* README.txt in Resources */,
 				279054A01A4299C500370BC7 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +596,7 @@
 			files = (
 				27CE7E8A1B285E26003B2128 /* NavigationViewController.swift in Sources */,
 				27EA5FA51A5BE4990073F625 /* Defaults.swift in Sources */,
+				2716338E1B29CEE300597C43 /* RectBorderLabel.swift in Sources */,
 				27EA5FA61A5BE4990073F625 /* AppDelegate.swift in Sources */,
 				27EA5FB11A5BE4990073F625 /* PhotoLockTableViewController.swift in Sources */,
 				27EA5FB21A5BE4990073F625 /* PhotosCollectionViewController.swift in Sources */,
@@ -505,6 +604,7 @@
 				27EA5FB41A5BE4990073F625 /* ImportPhotosFromFileSharingViewController.swift in Sources */,
 				27CE7E7C1B284A48003B2128 /* BorderView.swift in Sources */,
 				27EA5FB51A5BE4990073F625 /* PhotoDisplayViewController.swift in Sources */,
+				27CE7EC41B291459003B2128 /* Settings.swift in Sources */,
 				27EA5FB61A5BE4990073F625 /* PhotoViewController.swift in Sources */,
 				27EA5FB71A5BE4990073F625 /* AuthenticationViewController.swift in Sources */,
 				27EA5FB81A5BE4990073F625 /* ChangePasswordViewController.swift in Sources */,
@@ -542,6 +642,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		271633901B2A6E0400597C43 /* UMSocialLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				271633911B2A6E0400597C43 /* en */,
+				271633A91B2A6E0400597C43 /* zh-Hans */,
+				27CCF28E1B2AA18F00FEB34E /* zh-Hant */,
+			);
+			name = UMSocialLocalizable.strings;
+			sourceTree = "<group>";
+		};
 		279054911A4299C500370BC7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -565,9 +675,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				279054961A4299C500370BC7 /* Base */,
-				278DBFF41A73364900E41ED9 /* en */,
-				278DBFF61A73364B00E41ED9 /* zh-Hans */,
-				278DBFF81A73364D00E41ED9 /* zh-Hant */,
+				27CCF28B1B2A9B0400FEB34E /* zh-Hans */,
+				27CCF28C1B2A9B0800FEB34E /* en */,
+				27CCF28D1B2A9B0B00FEB34E /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -695,6 +805,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PhotoLock/Vendors/GoogleMobileAdsSdkiOS-7.3.1",
+					"$(PROJECT_DIR)/PhotoLock/Vendors/UMSocial_Sdk_4.2.2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -723,6 +834,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PhotoLock/Vendors/GoogleMobileAdsSdkiOS-7.3.1",
+					"$(PROJECT_DIR)/PhotoLock/Vendors/UMSocial_Sdk_4.2.2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

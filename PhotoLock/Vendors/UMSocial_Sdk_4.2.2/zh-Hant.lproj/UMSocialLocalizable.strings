@@ -1,0 +1,68 @@
+/*
+ Localizable.strings
+ SocialSDK
+ 
+ Created by yeahugo on 13-6-17.
+ Copyright (c) 2013年 Umeng. All rights reserved.
+ */
+"button_cancel" = "取消";
+"button_ok" = "確定";
+"button_start" = "開啓";
+
+"button_close" = "關閉";
+"button_back" = "返回";
+"button_refresh" = "刷新";
+
+"label_request_account" = "正在獲取賬戶信息，請稍等...";
+
+"oauth_title" = "授權";
+"oauth_text" = "正在連接授權頁面，請稍等...";
+"mask_text" = "正在獲取數據，請稍等...";
+"oauth_follow" = "關注官方微博";
+
+"oauth_error_title" = "授權失敗";
+"oauth_error_message" = "服務器繁忙，授權失敗，請稍後再試";
+"oauth_error_not_approved" = "由于沒有在開放平台添加此賬號作爲測試賬號或者沒有通過審核等原因授權失敗";
+
+"shareQQ_error" = "抱歉";
+"shareQQ_notInstall" = "沒有安裝手機QQ客戶端";
+"shareQQ_openFail" = "打開手機QQ失敗";
+"shareClient_notInstall" = "沒有安裝客戶端";
+"shareInstagram_openFail" = "沒有安裝Instagram客戶端";
+
+"shareList_title" = "分享至";
+"shareEdit_title" = "分享至";
+"shareEdit_post" = "發布";
+"shareEdit_change_account" = "切換賬號";
+"shareEdit_post_finish" = "發送成功";
+"shareEdit_post_fail" = "發送失敗";
+"shareEdit_posting" = "正在發送";
+"shareEdit_delete_picture" = "刪除圖片";
+"shareEdit_delete_video" = "刪除視頻";
+"shareEdit_delete_music" = "刪除音樂";
+"shareEdit_error_not_empty" = "分享內容不能爲空";
+"shareEdit_error_too_long" = "分享內容長度超出限制";
+"shareEdit_error_auth_expired" = "授權過期，分享失敗";
+"shareEdit_error_auth_again" = "重新授權";
+"shareEdit_error_text_repeated" = "內容重複，分享失敗";
+"shareEdit_error_user_baned" = "對不起，因爲違反了用戶協議您已被禁言";
+"shareEdit_error_fail" = "分享失敗";
+"shareEdit_error_no_auth" = "無上傳圖片的權限，分享失敗";
+"shareEdit_error_empty_content" = "分享內容爲空，分享失敗";
+"shareEdit_addFollow" = "關注官方微博";
+"shareEdit_C" = "符";
+"shareEdit_used" = "常";
+"shareShake_button" = "分享";
+
+"share_wechat" = "分享至微信";
+"share_wechat_friend" = "分享至微信好友";
+"share_wechat_moments" = "分享至微信朋友圈";
+"share_wechat_no_title" = "溫馨提示";
+"share_wechat_no_message" = "您的設備沒有安裝微信";
+"share_facebook_not_login" = "賬號未登錄";
+"share_facebook_not_login_message" = "賬號未登錄";
+"share_facebook_no_osSupport" = "系統不支持";
+"share_facebook_no_osSupport_message" = "您的iOS系統版本過低，不支持分享到該平台";
+
+"share_sms_no_osSupport" = "不支持短信";
+"share_sms_no_osSupport_

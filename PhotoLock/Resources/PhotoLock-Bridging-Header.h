@@ -3,6 +3,7 @@
 //
 
 #import <GoogleMobileAds/GoogleMobileAds.h>
+#import "UMSocial.h"
 #import "Base.h"
 #import "BaseDBMasterKey.h"
 #import "Album.h"

@@ -9,6 +9,13 @@
 import Foundation
 import UIKit
 
+// AppID
+let HQAppID = "952647119"
+
+let UMAppKey = "557a45af67e58edb8b000962"
+var SharingTimes = Int(0)
+let SharingTimesNeededForHideAD = Int(5)
+
 // ScreenSize
 let ScreenWidth = UIScreen.mainScreen().bounds.size.width
 let ScreenHeight = UIScreen.mainScreen().bounds.size.height
@@ -27,7 +34,12 @@ let EmptyAlbumIconName = ""
 // 密码界面是否显示
 var passwordInterfaceShown = false
 var authenticationViewController: AuthenticationViewController!
+/*
+please change this value to a 16 length string
+e.g.
 let passwordForEncryptPassword = "1234567890123456"
+*/
+let passwordForEncryptPassword = passwordForEncryptPasswordDefault
 
 // 图片和缩略图的存储文件夹路径
 let PictureFoldPath = (NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.LibraryDirectory, NSSearchPathDomainMask.UserDomainMask, true).first as! String).stringByAppendingPathComponent("picture")
@@ -95,6 +107,8 @@ func pictureFromPhoto(photo:Photo) -> UIImage? {
     return pictureData == nil ? nil : UIImage(data: pictureData!)!
 }
 
+// 是否隐藏广告
+var HideAD = false
 // AdMob
 let AdMob = HQAdMob()
 class HQAdMob {
@@ -113,4 +127,28 @@ class HQAdMob {
         //request.testDevices = NSArray(array: [GAD_SIMULATOR_ID/*, "5041a084760bfe83b6701fa480ea3756"*/])
         bannerView.loadRequest(request)
     }
+}
+
+// MARK: Settings
+
+func loadData() {
+    // 读取配置
+    // HideAD
+    let ha: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("HideAD")
+    if ha != nil {
+        HideAD = (ha as! Bool)
+    }
+    // SharingTimes
+    let st: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("SharingTimes")
+    if st != nil {
+        SharingTimes = (st as! Int)
+    }
+}
+
+func saveData() {
+    // 保存配置
+    // HideAD
+    NSUserDefaults.standardUserDefaults().setObject(HideAD, forKey: "HideAD")
+    // SharingTimes
+    NSUserDefaults.standardUserDefaults().setObject(SharingTimes, forKey: "SharingTimes")
 }

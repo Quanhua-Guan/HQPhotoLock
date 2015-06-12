@@ -8,30 +8,46 @@
 
 import UIKit
 
-class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, PhotosCollectionViewControllerDelegate {
+class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, PhotosCollectionViewControllerDelegate, UIAlertViewDelegate {
 
     // MARK: - Vars
     @IBOutlet weak var tableView: UITableView!
     var albums: [AnyObject]!
     var hintImageView: UIImageView!
     var shouldReloadTable: Bool = false
+    private var album: Album!
     @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var adViewBottomMargin: NSLayoutConstraint!
     
     // MARK: - ViewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
+//        // testing start
+//        let fm = NSFileManager.defaultManager()
+//        for i in 1...32 {
+//            let imagePath = NSBundle.mainBundle().pathForResource("\(i)", ofType: "png")!
+//            let imageDesPath = FileSharingFoldPath + "/\(i).png"
+//            if !fm.fileExistsAtPath(imageDesPath) {
+//                fm.copyItemAtPath(imagePath, toPath: imageDesPath, error: nil)
+//            }
+//        }
+//        // testing end
+        
         hintImageView = UIImageView(image: UIImage(named:"AlbumsHintImage"))
         hintImageView.frame = CGRectMake(0, 50, self.view.bounds.size.width, self.view.bounds.size.width)
         hintImageView.contentMode = UIViewContentMode.ScaleAspectFit
+        hintImageView.alpha = 0.75
         self.view.addSubview(hintImageView)
         
         let theAlbums: AnyObject? = DBMasterKey.getAll(Album.self)
         albums = (theAlbums ?? []) as! [AnyObject]
         
         // AdMob
-        AdMob.showAdInView(self.bannerView, inViewController: self)
+        if HideAD == false {
+            AdMob.showAdInView(self.bannerView, inViewController: self)
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -40,6 +56,15 @@ class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITab
         if self.shouldReloadTable {
             self.tableView.reloadData()
             self.shouldReloadTable = false
+        }
+        
+        if HideAD {
+            adViewBottomMargin.constant = -50
+            UIView.animateWithDuration(1, animations: { () -> Void in
+                self.view.layoutIfNeeded()
+            })
+        } else {
+            adViewBottomMargin.constant = 0
         }
     }
     
@@ -86,6 +111,8 @@ class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITab
                 DBMasterKey.update(album)
             }
         }
+        
+        cell.contentView.layoutIfNeeded()
         
         return cell
     }
@@ -163,6 +190,10 @@ class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITab
         return 80.0
     }
     
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = UIColor(white: 1.0, alpha: 0.26)
+    }
+        
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -209,20 +240,26 @@ class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITab
             let message = NSLocalizedString("Please enter new album name", comment: "");
             let cancelString = NSLocalizedString("Cancel", comment: "");
             let otherString = NSLocalizedString("OK", comment: "");
-            UIAlertView.showWithTitle(title, message: message, style: UIAlertViewStyle.PlainTextInput, cancelButtonTitle: cancelString, otherButtonTitles: [otherString]) { (alertView, index) -> Void in
-                if index == 0 {
-                } else if index == 1 {
-                    let albumName = alertView.textFieldAtIndex(0)?.text ?? ""
-                    let row = self.tableView.indexPathForCell(sender.view as! UITableViewCell)?.row;
-                    var album = self.albums[row!] as! Album
-                    album.name = albumName
-                    //
-                    DBMasterKey.update(album)
-                    //
-                    self.tableView.reloadData()
-                }
-                alertView.dismissWithClickedButtonIndex(index, animated: true)
-            }
+            let alertView = UIAlertView(title: title, message: message, delegate: self, cancelButtonTitle: cancelString, otherButtonTitles: otherString)
+            alertView.alertViewStyle = UIAlertViewStyle.PlainTextInput
+            
+            let row = self.tableView.indexPathForCell(sender.view as! UITableViewCell)?.row;
+            album = self.albums[row!] as! Album
+            alertView.textFieldAtIndex(0)?.text = album.name
+            alertView.show()
+        }
+    }
+    
+    // UIAlertViewDelegate
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        if buttonIndex == 0 {
+        } else if buttonIndex == 1 {
+            let albumName = alertView.textFieldAtIndex(0)?.text ?? ""
+            album.name = albumName
+            //
+            DBMasterKey.update(album)
+            //
+            self.tableView.reloadData()
         }
     }
     

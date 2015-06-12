@@ -41,6 +41,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 监听锁屏事件
         CommonUtilities.observerLockEvents()
         
+        // 加载设置
+        loadData()
+        
+        // 友盟
+        UMSocialData.setAppKey(UMAppKey)
+        
         return true
     }
 
@@ -49,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
-       
+        saveData()
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
@@ -60,6 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(application: UIApplication) {
+        saveData()
     }
     
     func showPasswordInterface() {

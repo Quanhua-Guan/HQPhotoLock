@@ -49,6 +49,17 @@ extension Color {
         self.init(red: r, green: g, blue: b, alpha: 1.0)
     }
     
+    convenience init(hex: String, alpha:CGFloat) {
+        var rgbInt: UInt64 = 0
+        let newHex: NSString = NSString(string: hex).stringByReplacingOccurrencesOfString("#", withString: "")
+        var scanner = NSScanner(string: newHex as String)
+        scanner.scanHexLongLong(&rgbInt)
+        let r: CGFloat = CGFloat((rgbInt & 0xFF0000) >> 16)/255.0
+        let g: CGFloat = CGFloat((rgbInt & 0x00FF00) >> 8)/255.0
+        let b: CGFloat = CGFloat(rgbInt & 0x0000FF)/255.0
+        self.init(red: r, green: g, blue: b, alpha: alpha)
+    }
+    
     convenience init(rgba: (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat)) {
         self.init(red: rgba.r, green: rgba.g, blue: rgba.b, alpha: rgba.a)
     }

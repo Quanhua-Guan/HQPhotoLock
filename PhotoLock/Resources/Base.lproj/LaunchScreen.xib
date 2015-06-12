@@ -34,7 +34,7 @@
                     <color key="textColor" red="0.1333333333" green="0.72156862749999995" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PHOTO" translatesAutoresizingMaskIntoConstraints="NO" id="Lww-6g-TLV">
+                <imageView userInteractionEnabled="NO" alpha="0.64999999999999991" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PHOTO" translatesAutoresizingMaskIntoConstraints="NO" id="Lww-6g-TLV">
                     <rect key="frame" x="160" y="160" width="160" height="160"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
