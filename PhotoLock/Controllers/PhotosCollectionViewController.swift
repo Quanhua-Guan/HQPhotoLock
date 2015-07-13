@@ -60,6 +60,14 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
             photosSelected.append(false)
         }
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        // 隐藏工具栏
+        if self.navigationController?.toolbarHidden == false {
+            self.navigationController?.setToolbarHidden(true, animated: true)
+        }
+    }
         
     // MARK: - IBActions
     
@@ -164,8 +172,7 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
                 self.collectionView.reloadData()
             }
             alertView.dismissWithClickedButtonIndex(index, animated: true)
-        }
-        
+        }        
     }
     
     @IBAction func done(sender: UIBarButtonItem) {
@@ -479,7 +486,7 @@ class PhotosCollectionViewController: UIViewController, UICollectionViewDataSour
                         self.photos.append(photo)
                         self.photosSelected.append(false)
                         // 删除文件
-                        //testing//fm.removeItemAtPath(file, error: nil)
+                        fm.removeItemAtPath(file, error: nil)
                     } else {
                         errorOccours = true
                     }

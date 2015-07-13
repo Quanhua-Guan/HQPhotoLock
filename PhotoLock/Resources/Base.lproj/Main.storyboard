@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -531,8 +532,34 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="GjM-Bf-Eai">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3w-hI-tJ2" customClass="GADBannerView">
+                                <rect key="frame" x="140" y="550" width="320" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Ghp-EO-8fQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="LpE-LI-MeC"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="gba-4M-ZlN" id="cLi-nq-GEy"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDE-V0-jkx" customClass="CircleButton">
+                                <rect key="frame" x="145" y="555" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="0.39000000000000001" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aDE-V0-jkx" secondAttribute="height" multiplier="1:1" id="u9Z-X3-ZPi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="✕">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideAD:" destination="gba-4M-ZlN" eventType="touchUpInside" id="jYB-wU-Oxl"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zLl-aL-eVP">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="486"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="1" alpha="0.080000000000000002" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -568,27 +595,22 @@
                                     <outlet property="delegate" destination="gba-4M-ZlN" id="VgZ-s9-GYg"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3w-hI-tJ2" customClass="GADBannerView">
-                                <rect key="frame" x="140" y="600" width="320" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="Ghp-EO-8fQ"/>
-                                    <constraint firstAttribute="height" constant="50" id="LpE-LI-MeC"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.68235296010000002" green="0.85490202900000001" blue="0.85098046059999999" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="GjM-Bf-Eai" secondAttribute="width" id="KbL-To-RZ9"/>
+                            <constraint firstItem="c3w-hI-tJ2" firstAttribute="bottom" secondItem="aDE-V0-jkx" secondAttribute="bottom" constant="5" id="MMg-nB-8Z5"/>
                             <constraint firstItem="c3w-hI-tJ2" firstAttribute="top" secondItem="zLl-aL-eVP" secondAttribute="bottom" id="PAt-zV-fu7"/>
                             <constraint firstAttribute="centerX" secondItem="GjM-Bf-Eai" secondAttribute="centerX" id="QxI-8b-e9w"/>
                             <constraint firstAttribute="height" secondItem="GjM-Bf-Eai" secondAttribute="height" id="Ti4-a0-C3D"/>
                             <constraint firstAttribute="centerY" secondItem="GjM-Bf-Eai" secondAttribute="centerY" id="UCq-a3-s3d"/>
-                            <constraint firstItem="tnq-vL-e7C" firstAttribute="top" secondItem="c3w-hI-tJ2" secondAttribute="bottom" constant="-50" id="ZbA-BP-Wdc"/>
+                            <constraint firstItem="tnq-vL-e7C" firstAttribute="top" secondItem="c3w-hI-tJ2" secondAttribute="bottom" id="ZbA-BP-Wdc"/>
+                            <constraint firstItem="c3w-hI-tJ2" firstAttribute="leading" secondItem="aDE-V0-jkx" secondAttribute="leading" constant="-5" id="guR-3l-isY"/>
                             <constraint firstItem="zLl-aL-eVP" firstAttribute="width" secondItem="GjM-Bf-Eai" secondAttribute="width" id="hfj-6F-a95"/>
                             <constraint firstItem="zLl-aL-eVP" firstAttribute="top" secondItem="PpB-fP-Bet" secondAttribute="bottom" id="uY3-kp-G6t"/>
                             <constraint firstItem="zLl-aL-eVP" firstAttribute="centerX" secondItem="GjM-Bf-Eai" secondAttribute="centerX" id="v7f-Be-wwF"/>
                             <constraint firstAttribute="centerX" secondItem="c3w-hI-tJ2" secondAttribute="centerX" id="vjB-A2-w4h"/>
+                            <constraint firstItem="c3w-hI-tJ2" firstAttribute="top" secondItem="aDE-V0-jkx" secondAttribute="top" constant="-5" id="yhU-IM-iQx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Albums" id="MSe-V8-OzI">
@@ -606,6 +628,7 @@
                     <connections>
                         <outlet property="adViewBottomMargin" destination="ZbA-BP-Wdc" id="sZR-Uv-ESd"/>
                         <outlet property="bannerView" destination="c3w-hI-tJ2" id="OWe-hR-I75"/>
+                        <outlet property="hideAdButton" destination="aDE-V0-jkx" id="dbj-Qa-ILb"/>
                         <outlet property="tableView" destination="zLl-aL-eVP" id="I04-vg-i4C"/>
                     </connections>
                 </viewController>

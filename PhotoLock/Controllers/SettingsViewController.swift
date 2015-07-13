@@ -18,6 +18,10 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()        
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -63,10 +67,12 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         
         if indexPath.section == 1 {
             if indexPath.row == 0 {
-                let url = "itms-apps://itunes.apple.com/app/id" + HQAppID
-                if let URL = NSURL(string: url) {
-                    UIApplication.sharedApplication().openURL(URL)
-                }
+//                let url = "itms-apps://itunes.apple.com/app/id" + HQAppID
+//                if let URL = NSURL(string: url) {
+//                    UIApplication.sharedApplication().openURL(URL)
+//                }
+                iRate.sharedInstance().ratedThisVersion = true
+                iRate.sharedInstance().openRatingsPageInAppStore()
             } else {
                 // share
                 self.showShareLists()
@@ -96,7 +102,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         var sharingText = NSLocalizedString("SharingText", comment:"")
         let sharingImage = UIImage(named: "SharingImage")
         let sharingURL = NSURL(fileURLWithPath: NSLocalizedString("SharingURL", comment: ""))
-        let shareToPlatforms = [UMShareToSina,UMShareToTencent,UMShareToRenren, UMShareToFacebook, UMShareToTwitter]
+        let shareToPlatforms = [UMShareToSina,UMShareToTencent, UMShareToFacebook, UMShareToTwitter]
         // facebook
         UMSocialSnsPlatformManager.getSocialPlatformWithName(UMShareToFacebook).snsClickHandler = {(presentingViewController, socialControllerService, isPresentInController) in
             self.slComposerSheet = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
@@ -123,10 +129,9 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         UMSocialConfig.hiddenNotInstallPlatforms(nil)
-        sharingText = sharingText + sharingURL!.path!
+        sharingText = NSLocalizedString("SharingURL", comment: "") + " " + sharingText
         UMSocialSnsService.presentSnsIconSheetView(self, appKey: UMAppKey, shareText: sharingText, shareImage: sharingImage, shareToSnsNames: shareToPlatforms, delegate: self)
     }
-    
     
     // 弹出列表方法presentSnsIconSheetView需要设置delegate为self
     func isDirectShareInIconActionSheet() -> Bool {
@@ -144,5 +149,17 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        let actionSheet = self.navigationController?.view.viewWithTag(Int(kTagSocialIconActionSheet)) as? UMSocialIconActionSheet
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            actionSheet?.dismiss()
+        })
+    }
+    
+    override func willAnimateRotationToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+        let actionSheet = self.navigationController?.view.viewWithTag(Int(kTagSocialIconActionSheet)) as? UMSocialIconActionSheet
+        actionSheet?.dismiss()
     }
 }

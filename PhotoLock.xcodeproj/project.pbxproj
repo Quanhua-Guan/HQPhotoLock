@@ -21,6 +21,7 @@
 		271633B41B2A6E0400597C43 /* UMSocialSDKResourcesNew.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 271633A81B2A6E0400597C43 /* UMSocialSDKResourcesNew.bundle */; };
 		272F668B1A494B4C00C44A54 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F668A1A494B4C00C44A54 /* libz.dylib */; };
 		272F668D1A494B5200C44A54 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F668C1A494B5200C44A54 /* libsqlite3.0.dylib */; };
+		278DACCF1B2BC50700E19101 /* CircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 278DACCD1B2BC50700E19101 /* CircleButton.m */; };
 		279054551A41BDDA00370BC7 /* PhotoLockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279054541A41BDDA00370BC7 /* PhotoLockTests.swift */; };
 		279054A01A4299C500370BC7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 279054911A4299C500370BC7 /* InfoPlist.strings */; };
 		279054A11A4299C500370BC7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279054931A4299C500370BC7 /* LaunchScreen.xib */; };
@@ -121,6 +122,8 @@
 		272F668F1A49589500C44A54 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		277A355A1A5271EC0030FA22 /* CommonUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtilities.h; sourceTree = "<group>"; };
 		277A355B1A5271EC0030FA22 /* CommonUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtilities.m; sourceTree = "<group>"; };
+		278DACCD1B2BC50700E19101 /* CircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleButton.m; sourceTree = "<group>"; };
+		278DACCE1B2BC50700E19101 /* CircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleButton.h; sourceTree = "<group>"; };
 		279054391A41BDDA00370BC7 /* PhotoLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2790544E1A41BDDA00370BC7 /* PhotoLockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoLockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		279054531A41BDDA00370BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -377,6 +380,8 @@
 		2790549E1A4299C500370BC7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				278DACCD1B2BC50700E19101 /* CircleButton.m */,
+				278DACCE1B2BC50700E19101 /* CircleButton.h */,
 				2716338D1B29CEE300597C43 /* RectBorderLabel.swift */,
 				27CE7E791B2848BC003B2128 /* RectBorderButton.swift */,
 				27CE7E7B1B284A48003B2128 /* BorderView.swift */,
@@ -611,6 +616,7 @@
 				27EA5FBA1A5BE4990073F625 /* NSData+AESCrypt.m in Sources */,
 				27EA5FBC1A5BE4990073F625 /* NSString+AESCrypt.m in Sources */,
 				27CE7E7E1B285416003B2128 /* Colours.swift in Sources */,
+				278DACCF1B2BC50700E19101 /* CircleButton.m in Sources */,
 				27EA5FBE1A5BE4990073F625 /* NSData+CommonCrypto.m in Sources */,
 				27EA5FC01A5BE4990073F625 /* UIImage+FixOrientation.m in Sources */,
 				27EA5FC21A5BE4990073F625 /* CommonUtilities.m in Sources */,
@@ -811,6 +817,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PhotoLock/Resources/PhotoLock-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -839,6 +846,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PhotoLock/Resources/PhotoLock-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, PhotosCollectionViewControllerDelegate, UIAlertViewDelegate {
+class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, PhotosCollectionViewControllerDelegate, UIAlertViewDelegate, GADBannerViewDelegate {
 
     // MARK: - Vars
     @IBOutlet weak var tableView: UITableView!
@@ -17,6 +17,7 @@ class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITab
     var shouldReloadTable: Bool = false
     private var album: Album!
     @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var hideAdButton: UIButton!
     @IBOutlet weak var adViewBottomMargin: NSLayoutConstraint!
     
     // MARK: - ViewDidLoad
@@ -250,7 +251,18 @@ class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
-    // UIAlertViewDelegate
+    @IBAction func hideAD(sender: UIButton) {
+        var message:String!
+        message = String(format: NSLocalizedString("Share THIS %d times to remove AD!", comment:""), SharingTimesNeededForHideAD - SharingTimes)
+        UIAlertView.showWithTitle("Tip", message: message, cancelButtonTitle: NSLocalizedString("Cancel", comment: ""), otherButtonTitles: [NSLocalizedString("OK", comment: "")]) { (alert, index) -> Void in
+            if index == 1 {
+                self.performSegueWithIdentifier(SegueIdentifierGoSettings, sender: sender)
+            }
+            alert.dismissWithClickedButtonIndex(index, animated: true)
+        }
+    }
+    
+    // MARK: - UIAlertViewDelegate
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
         if buttonIndex == 0 {
         } else if buttonIndex == 1 {
@@ -267,6 +279,16 @@ class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITab
     
     func setNeedReloadAlbumsTable() {
         self.shouldReloadTable = true
+    }
+    
+    // MARK: - GADBannerViewDelegate
+    
+    func adViewDidReceiveAd(view: GADBannerView!) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC * 3)), dispatch_get_main_queue()) { () -> Void in
+            UIView.animateWithDuration(1.0, animations: { () -> Void in
+                self.hideAdButton.alpha = 1.0
+            })
+        }
     }
     
 }

@@ -20,3 +20,4 @@
 #import "NSString+AESCrypt.h"
 #import "CommonUtilities.h"
 #import "Masonry.h"
+#import "iRate.h"

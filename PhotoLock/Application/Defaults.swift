@@ -151,4 +151,6 @@ func saveData() {
     NSUserDefaults.standardUserDefaults().setObject(HideAD, forKey: "HideAD")
     // SharingTimes
     NSUserDefaults.standardUserDefaults().setObject(SharingTimes, forKey: "SharingTimes")
+    // 写入磁盘
+    NSUserDefaults.standardUserDefaults().synchronize()
 }
