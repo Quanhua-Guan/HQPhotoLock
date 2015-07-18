@@ -117,7 +117,7 @@ class ChangePasswordViewController: UIViewController {
             cancelButtonTitle: cancelTitle,
             otherButtonTitles: otherButtonsTitle) { (alertView, index) -> Void in
                 if index == 0 {
-                    // nothing
+                    // do nothing
                 } else if index == 1 {
                     var password = ""
                     for flag in self.passwordsInput {
