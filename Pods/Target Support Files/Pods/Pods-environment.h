@@ -10,7 +10,7 @@
 #define COCOAPODS_POD_AVAILABLE_CTAssetsPickerController
 #define COCOAPODS_VERSION_MAJOR_CTAssetsPickerController 2
 #define COCOAPODS_VERSION_MINOR_CTAssetsPickerController 9
-#define COCOAPODS_VERSION_PATCH_CTAssetsPickerController 4
+#define COCOAPODS_VERSION_PATCH_CTAssetsPickerController 5
 
 // FMDB
 #define COCOAPODS_POD_AVAILABLE_FMDB
@@ -34,7 +34,7 @@
 #define COCOAPODS_POD_AVAILABLE_Masonry
 #define COCOAPODS_VERSION_MAJOR_Masonry 0
 #define COCOAPODS_VERSION_MINOR_Masonry 6
-#define COCOAPODS_VERSION_PATCH_Masonry 1
+#define COCOAPODS_VERSION_PATCH_Masonry 2
 
 // SVProgressHUD
 #define COCOAPODS_POD_AVAILABLE_SVProgressHUD

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ImportPhotosFromFileSharingViewControllerDelegate {
+protocol ImportPhotosFromFileSharingViewControllerDelegate : class {
     func importPhotosFromFileSharingViewController(vc:ImportPhotosFromFileSharingViewController, hasFinishedPickFiles files:[String])
 }
 
@@ -18,7 +18,7 @@ class ImportPhotosFromFileSharingViewController: UITableViewController {
     var doneButtonItem :UIBarButtonItem!
     
     // MARK: - Vars
-    var importDelegate: ImportPhotosFromFileSharingViewControllerDelegate!
+    weak var importDelegate: ImportPhotosFromFileSharingViewControllerDelegate!
     var photos: [String]!
     
     var timerForRefresh: NSTimer!

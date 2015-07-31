@@ -109,7 +109,7 @@ static NSString *const kDBName = @"cqmh.sqlite";
     //获取查询结果
     FMResultSet *rs = [fmdb executeQuery:[NSString stringWithFormat:@"SELECT * FROM %@ ORDER BY %@ DESC", tableName, ((NSArray *)[tableClass primaryKeys]).firstObject]];
     while ([rs next]) {
-        Base *base = [[[tableClass class] alloc] init];
+        Base *base = [tableClass new];
         [base setValues:rs.resultDictionary];
         [resultArray addObject:base];
     }

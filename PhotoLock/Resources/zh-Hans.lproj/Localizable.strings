@@ -39,3 +39,4 @@
 "Please select at least 1 picture!"="请至少选择1张相片!";
 "Deleted pictures can not be recovered! Do you want to delete these pictures?"="删除图片不可恢复! 是否删除?";
 "Error occurs"="发生了错误哟~";
+"Some files are not imported! Please import them!" = "由于内存问题, 还有一些文件未导入, 请导入它们!";

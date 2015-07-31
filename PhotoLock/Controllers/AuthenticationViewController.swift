@@ -86,7 +86,7 @@ class AuthenticationViewController: UIViewController {
         }
         
         if passwordInterfaceShown {
-            self.dismissViewControllerAnimated(true, completion: { () -> Void in
+            self.dismissViewControllerAnimated(true, completion: {[unowned self] () -> Void in
                 passwordInterfaceShown = false
                 for i in 1...self.passwords.count {
                     if self.passwordsInput[i - 1] {

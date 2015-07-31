@@ -164,6 +164,7 @@
             NSString *propName = [NSString stringWithUTF8String:property_getName(property)];
             [_properties addObject:propName];
         }
+        free(properties);
         
         _propertiesArray[tableName] = _properties;
     }

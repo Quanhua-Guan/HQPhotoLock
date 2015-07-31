@@ -22,9 +22,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SVProgressHUD.setBackgroundColor(UIColor(patternImage: UIImage(named: "HUDBackground")!))
         SVProgressHUD.setForegroundColor(UIColor(red: 0.0, green: 0.8, blue: 1.0, alpha: 1.0))
         
-        // 新建文件夹
+        // 删除所有临时文件夹的所有文件
         let fileManager = NSFileManager.defaultManager()
-        for path in [PictureFoldPath, ThumbnailFoldPath] {
+        let tempDirectory = NSTemporaryDirectory()
+        let directoryEnumerator = fileManager.enumeratorAtPath(tempDirectory)
+        var file = directoryEnumerator?.nextObject() as? String
+        while file != nil {
+            fileManager .removeItemAtPath(tempDirectory.stringByAppendingPathComponent(file!), error: nil)
+            file = directoryEnumerator?.nextObject() as? String
+        }
+        
+        // 新建文件夹
+        for path in [PictureFoldPath, ThumbnailFoldPath, PlaceholderFoldPath, PictureFoldPathTemp, ThumbnailFoldPathTemp, PlaceholderFoldPathTemp] {
             if !fileManager.fileExistsAtPath(path) {
                 var error: NSError?
                 fileManager.createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil, error: &error)
@@ -63,6 +72,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidBecomeActive(application: UIApplication) {
+        if authenticationViewController != nil {
+            AdMob.showInterstitialIfReadyFromViewController(authenticationViewController)
+        }
     }
 
     func applicationWillTerminate(application: UIApplication) {

@@ -16,10 +16,6 @@ let UMAppKey = "557a45af67e58edb8b000962"
 var SharingTimes = Int(0)
 let SharingTimesNeededForHideAD = Int(5)
 
-// ScreenSize
-let ScreenWidth = UIScreen.mainScreen().bounds.size.width
-let ScreenHeight = UIScreen.mainScreen().bounds.size.height
-
 // 数据库操作者
 let DBMasterKey = BaseDBMasterKey();
 
@@ -30,6 +26,11 @@ let SegueIdentifierShowMainMenu = "showMainMenu"
 let SegueIdentifierShowPhotos = "showPhotos"
 
 let EmptyAlbumIconName = ""
+
+let MinPixelsForTiling:CGFloat  = 1000 * 1000// 图片长宽超过该值时需要分片
+let TileSize:CGFloat = 600// 分片宽度和高度
+let TiledSuffix = "tiled"
+let PlaceholderSuffix = "_Placeholder"
 
 // 密码界面是否显示
 var passwordInterfaceShown = false
@@ -44,7 +45,11 @@ let passwordForEncryptPassword = passwordForEncryptPasswordDefault
 // 图片和缩略图的存储文件夹路径
 let PictureFoldPath = (NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.LibraryDirectory, NSSearchPathDomainMask.UserDomainMask, true).first as! String).stringByAppendingPathComponent("picture")
 let ThumbnailFoldPath = (NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.LibraryDirectory, NSSearchPathDomainMask.UserDomainMask, true).first as! String).stringByAppendingPathComponent("thumbnail")
+let PlaceholderFoldPath = (NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.LibraryDirectory, NSSearchPathDomainMask.UserDomainMask, true).first as! String).stringByAppendingPathComponent("placeholder")
 let FileSharingFoldPath = (NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).first as! String)
+let PictureFoldPathTemp = NSTemporaryDirectory().stringByAppendingPathComponent("picture")
+let ThumbnailFoldPathTemp = NSTemporaryDirectory().stringByAppendingPathComponent("thumbnail")
+let PlaceholderFoldPathTemp = NSTemporaryDirectory().stringByAppendingPathComponent("placeholder")
 
 extension UIColor {
     class func randomColor(alpha:CGFloat = 0.09) -> UIColor{
@@ -92,6 +97,12 @@ extension UIImage {
     
 }
 
+func placeholderFromPhoto(photo:Photo) -> UIImage? {
+    var placeholderData = NSData(contentsOfFile: PlaceholderFoldPath.stringByAppendingPathComponent(photo.originalFilename + PlaceholderSuffix))
+    placeholderData = placeholderData?.decryptAndDcompress(placeholderData)
+    return placeholderData == nil ? nil : UIImage(data: placeholderData!)!
+}
+
 func thumbnailFromPhoto(photo:Photo) -> UIImage? {
     var thumbnailData = NSData(contentsOfFile: ThumbnailFoldPath.stringByAppendingPathComponent(photo.thumbnailFilename))
     thumbnailData = thumbnailData?.decryptAndDcompress(thumbnailData)
@@ -111,21 +122,71 @@ func pictureFromPhoto(photo:Photo) -> UIImage? {
 var HideAD = false
 // AdMob
 let AdMob = HQAdMob()
-class HQAdMob {
-    // adUnitID for AdMob
-    let AdUnitID = "ca-app-pub-6958627927268333/2853184404"
-    //
-    func showAdInView(bannerView: GADBannerView!, inViewController viewController: UIViewController!) {
-        // 广告
-        // Replace this ad unit ID with your own ad unit ID.
-        bannerView.adUnitID = AdUnitID
+
+// BannerAdUnitID for AdMob
+private let BannerAdUnitID = "ca-app-pub-6958627927268333/2853184404"
+// IntersititialAdUnitID for AdMob
+private let IntersititialAdUnitID = "ca-app-pub-6958627927268333/6289898001"
+
+class HQAdMob: NSObject, GADBannerViewDelegate, GADInterstitialDelegate {
+    
+    // MARK: - Banner AD
+    
+    private var actionAfterBannerADClicked:(() -> Void)?
+    // Banner Ad
+    func showBannerAdInView(bannerView: GADBannerView!, inViewController viewController: UIViewController!, theActionAfterBannerADClicked:(() -> Void)? = nil) {
+        // after clicking AD
+        actionAfterBannerADClicked = theActionAfterBannerADClicked
+        
+        // ad unit ID
+        bannerView.adUnitID = BannerAdUnitID
         bannerView.rootViewController = viewController
+        bannerView.delegate = self
         
         let request = GADRequest()
         // Requests test ads on devices you specify. Your test device ID is printed to the console when
         // an ad request is made.
         //request.testDevices = NSArray(array: [GAD_SIMULATOR_ID/*, "5041a084760bfe83b6701fa480ea3756"*/])
         bannerView.loadRequest(request)
+    }
+    
+    // MARK: - GADBannerViewDelegate
+    
+    func adViewWillLeaveApplication(adView: GADBannerView!) {
+        actionAfterBannerADClicked?()
+    }
+    
+    // MARK: - Interstitial AD
+    
+    private var interstitial:GADInterstitial!
+    private var actionAfterInterstitialADClicked:(() -> Void)?
+    
+    func createAndLoadInterstitial(theActionAfterInterstitialADClicked:(() -> Void)? = nil) -> GADInterstitial{
+        interstitial = GADInterstitial(adUnitID:IntersititialAdUnitID)
+        interstitial.delegate = self
+        interstitial.loadRequest(GADRequest())
+        return interstitial
+    }
+    
+    func showInterstitialIfReadyFromViewController(fromViewController: UIViewController) -> Bool {
+        if interstitial == nil {
+            createAndLoadInterstitial()
+        }
+        if interstitial.isReady {
+            interstitial.presentFromRootViewController(fromViewController)
+            return true
+        }
+        return false
+    }
+    
+    // MARK: - GADInterstitialDelegate
+    
+    func interstitialDidDismissScreen(ad: GADInterstitial!) {
+        createAndLoadInterstitial()
+    }
+    
+    func interstitialWillLeaveApplication(ad: GADInterstitial!) {
+        actionAfterInterstitialADClicked?()
     }
 }
 

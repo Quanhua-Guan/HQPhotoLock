@@ -21,3 +21,5 @@
 #import "CommonUtilities.h"
 #import "Masonry.h"
 #import "iRate.h"
+#import "CQMHPhotoSlicer.h"
+#import "TilingView.h"

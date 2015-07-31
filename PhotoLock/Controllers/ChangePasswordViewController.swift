@@ -94,7 +94,7 @@ class ChangePasswordViewController: UIViewController {
             message:message,
             style: UIAlertViewStyle.Default,
             cancelButtonTitle: nil,
-            otherButtonTitles: otherButtonsTitle) { (alertView, index) -> Void in
+            otherButtonTitles: otherButtonsTitle) {[unowned self] (alertView, index) -> Void in
                 alertView.dismissWithClickedButtonIndex(index, animated: true)
                 self.isInputingOldPassword = false
                 self.saveButton.enabled = true
@@ -115,7 +115,7 @@ class ChangePasswordViewController: UIViewController {
             message:message,
             style: UIAlertViewStyle.Default,
             cancelButtonTitle: cancelTitle,
-            otherButtonTitles: otherButtonsTitle) { (alertView, index) -> Void in
+            otherButtonTitles: otherButtonsTitle) {[unowned self] (alertView, index) -> Void in
                 if index == 0 {
                     // do nothing
                 } else if index == 1 {

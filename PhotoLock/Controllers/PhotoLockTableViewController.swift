@@ -47,7 +47,7 @@ class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITab
         
         // AdMob
         if HideAD == false {
-            AdMob.showAdInView(self.bannerView, inViewController: self)
+            AdMob.showBannerAdInView(self.bannerView, inViewController: self)
         }
     }
     
@@ -61,7 +61,7 @@ class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITab
         
         if HideAD {
             adViewBottomMargin.constant = -50
-            UIView.animateWithDuration(1, animations: { () -> Void in
+            UIView.animateWithDuration(1, animations: {[unowned self] () -> Void in
                 self.view.layoutIfNeeded()
             })
         } else {
@@ -138,7 +138,7 @@ class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITab
             UIAlertView.showWithTitle(title, message: message,
                 style: UIAlertViewStyle.Default,
                 cancelButtonTitle: cancelButtonTitle,
-                otherButtonTitles: otherButtonsTitle) { (alertView, index) -> Void in
+                otherButtonTitles: otherButtonsTitle) {[unowned self] (alertView, index) -> Void in
                     if index == 0 {
                     } else if index == 1 {
                         // Delete the row from the data source
@@ -147,22 +147,39 @@ class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITab
                         self.albums.removeAtIndex(indexPath.row)
                         //
                         tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
-                       
                         alertView.dismissWithClickedButtonIndex(index, animated: true)
-                        
                         SVProgressHUD.showWithStatus(NSLocalizedString("Processing^_^", comment: ""))
                         
                         let globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)
-                        dispatch_async(globalQueue, { () -> Void in
+                        dispatch_async(globalQueue, {[unowned self] () -> Void in
                             // 删除对应相册下的所有图片,在文件系统中删除对应的图片
-                            let photos = DBMasterKey.findInTable(Photo.self, whereField: Photo.foreignKeys().first as! String, equalToValue: album.createdTime) ?? NSMutableArray()
+                            var photos = DBMasterKey.findInTable(Photo.self, whereField: Photo.foreignKeys().first as! String, equalToValue: album.createdTime) ?? NSMutableArray()
                             // 删除数据库对应条目4
                             var index = 0
                             DBMasterKey.deleteObjects(photos as [AnyObject])
-                            for photo in photos {
-                                // 删除文件  原图+缩略图
-                                NSFileManager.defaultManager().removeItemAtPath(PictureFoldPath.stringByAppendingPathComponent(photo.originalFilename), error: nil)
-                                NSFileManager.defaultManager().removeItemAtPath(ThumbnailFoldPath.stringByAppendingPathComponent(photo.thumbnailFilename), error: nil)
+                            
+                            let fileManager = NSFileManager.defaultManager()
+                            // original
+                            for photo in ((photos as [AnyObject]) as! [Photo]) {
+                                if photo.originalFilename.hasSuffix(TiledSuffix) {
+                                    let imageBaseNameRowsColumnsWidthHeight = photo.originalFilename.componentsSeparatedByString("_")
+                                    let imageBaseName = imageBaseNameRowsColumnsWidthHeight[0]
+                                    let rows = imageBaseNameRowsColumnsWidthHeight[1].toInt()!
+                                    let columns = imageBaseNameRowsColumnsWidthHeight[2].toInt()!
+                                    
+                                    for r in 0..<rows {
+                                        for c in 0..<columns {
+                                            let pathToTileImageFile = PictureFoldPath.stringByAppendingPathComponent(String(format: "%@%02i%02i", imageBaseName, c, r))
+                                            fileManager.removeItemAtPath(pathToTileImageFile, error: nil)
+                                        }
+                                    }
+                                } else {
+                                    fileManager.removeItemAtPath(PictureFoldPath.stringByAppendingPathComponent(photo.originalFilename), error: nil)
+                                }
+                                // thumbnail
+                                fileManager.removeItemAtPath(ThumbnailFoldPath.stringByAppendingPathComponent(photo.thumbnailFilename), error: nil)
+                                // placeholder
+                                fileManager.removeItemAtPath(PlaceholderFoldPath.stringByAppendingPathComponent(photo.originalFilename + PlaceholderSuffix), error: nil)
                                 //
                                 index++
                                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -285,7 +302,7 @@ class PhotoLockTableViewController: UIViewController, UITableViewDelegate, UITab
     
     func adViewDidReceiveAd(view: GADBannerView!) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC * 3)), dispatch_get_main_queue()) { () -> Void in
-            UIView.animateWithDuration(1.0, animations: { () -> Void in
+            UIView.animateWithDuration(1.0, animations: {[unowned self] () -> Void in
                 self.hideAdButton.alpha = 1.0
             })
         }

@@ -19,6 +19,9 @@
 		271633B21B2A6E0400597C43 /* UMSnsAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271633A61B2A6E0400597C43 /* UMSnsAccountViewController.xib */; };
 		271633B31B2A6E0400597C43 /* UMSShareListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271633A71B2A6E0400597C43 /* UMSShareListController.xib */; };
 		271633B41B2A6E0400597C43 /* UMSocialSDKResourcesNew.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 271633A81B2A6E0400597C43 /* UMSocialSDKResourcesNew.bundle */; };
+		271B22C81B5B2C2600D8EAAD /* CQMHPhotoSlicer.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B22C71B5B2C2600D8EAAD /* CQMHPhotoSlicer.m */; };
+		271B22CB1B5B317300D8EAAD /* TilingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B22CA1B5B317300D8EAAD /* TilingView.m */; };
+		271B22D31B5B407F00D8EAAD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B22D21B5B407F00D8EAAD /* ImageIO.framework */; };
 		272F668B1A494B4C00C44A54 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F668A1A494B4C00C44A54 /* libz.dylib */; };
 		272F668D1A494B5200C44A54 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F668C1A494B5200C44A54 /* libsqlite3.0.dylib */; };
 		278DACCF1B2BC50700E19101 /* CircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 278DACCD1B2BC50700E19101 /* CircleButton.m */; };
@@ -107,6 +110,11 @@
 		271633A71B2A6E0400597C43 /* UMSShareListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMSShareListController.xib; sourceTree = "<group>"; };
 		271633A81B2A6E0400597C43 /* UMSocialSDKResourcesNew.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResourcesNew.bundle; sourceTree = "<group>"; };
 		271633A91B2A6E0400597C43 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/UMSocialLocalizable.strings"; sourceTree = "<group>"; };
+		271B22C61B5B2C2600D8EAAD /* CQMHPhotoSlicer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQMHPhotoSlicer.h; sourceTree = "<group>"; };
+		271B22C71B5B2C2600D8EAAD /* CQMHPhotoSlicer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQMHPhotoSlicer.m; sourceTree = "<group>"; };
+		271B22C91B5B317300D8EAAD /* TilingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TilingView.h; sourceTree = "<group>"; };
+		271B22CA1B5B317300D8EAAD /* TilingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TilingView.m; sourceTree = "<group>"; };
+		271B22D21B5B407F00D8EAAD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		272F66271A49207E00C44A54 /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
 		272F66281A49207E00C44A54 /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
 		272F665A1A49308F00C44A54 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
@@ -174,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271B22D31B5B407F00D8EAAD /* ImageIO.framework in Frameworks */,
 				272F668D1A494B5200C44A54 /* libsqlite3.0.dylib in Frameworks */,
 				271633AB1B2A6E0400597C43 /* libUMSocial_Sdk_4.2.2.a in Frameworks */,
 				27CCF2861B2A70E700FEB34E /* GoogleMobileAds.framework in Frameworks */,
@@ -259,6 +268,8 @@
 				270236691A5011D400C703B6 /* UIImage+FixOrientation.m */,
 				277A355A1A5271EC0030FA22 /* CommonUtilities.h */,
 				277A355B1A5271EC0030FA22 /* CommonUtilities.m */,
+				271B22C61B5B2C2600D8EAAD /* CQMHPhotoSlicer.h */,
+				271B22C71B5B2C2600D8EAAD /* CQMHPhotoSlicer.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -388,6 +399,8 @@
 				27CE7E791B2848BC003B2128 /* RectBorderButton.swift */,
 				27CE7E7B1B284A48003B2128 /* BorderView.swift */,
 				27CE7E891B285E26003B2128 /* NavigationViewController.swift */,
+				271B22C91B5B317300D8EAAD /* TilingView.h */,
+				271B22CA1B5B317300D8EAAD /* TilingView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -434,6 +447,7 @@
 		645C03E757822909BF359980 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				271B22D21B5B407F00D8EAAD /* ImageIO.framework */,
 				272F668C1A494B5200C44A54 /* libsqlite3.0.dylib */,
 				272F668A1A494B4C00C44A54 /* libz.dylib */,
 				D412F3913F0CEB662F90C3E8 /* libPods.a */,
@@ -610,6 +624,8 @@
 				27EA5FB31A5BE4990073F625 /* SettingsViewController.swift in Sources */,
 				27EA5FB41A5BE4990073F625 /* ImportPhotosFromFileSharingViewController.swift in Sources */,
 				27CE7E7C1B284A48003B2128 /* BorderView.swift in Sources */,
+				271B22C81B5B2C2600D8EAAD /* CQMHPhotoSlicer.m in Sources */,
+				271B22CB1B5B317300D8EAAD /* TilingView.m in Sources */,
 				27EA5FB51A5BE4990073F625 /* PhotoDisplayViewController.swift in Sources */,
 				27CE7EC41B291459003B2128 /* Settings.swift in Sources */,
 				27EA5FB61A5BE4990073F625 /* PhotoViewController.swift in Sources */,
