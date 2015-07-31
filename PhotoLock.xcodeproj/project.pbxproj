@@ -156,6 +156,7 @@
 		27AFFFD61A5BC6CC00C8A8B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CTAssetsPickerController.strings; sourceTree = "<group>"; };
 		27AFFFD71A5BC6CC00C8A8B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/CTAssetsPickerController.strings"; sourceTree = "<group>"; };
 		27AFFFD81A5BC6CD00C8A8B9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/CTAssetsPickerController.strings"; sourceTree = "<group>"; };
+		27CB8B881B6AF60A009045EA /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		27CCF2801B2A70E700FEB34E /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		27CCF2821B2A70E700FEB34E /* GADMAdNetworkAdapterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdNetworkAdapterProtocol.h; sourceTree = "<group>"; };
 		27CCF2831B2A70E700FEB34E /* GADMAdNetworkConnectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdNetworkConnectorProtocol.h; sourceTree = "<group>"; };
@@ -171,7 +172,6 @@
 		27CE7E891B285E26003B2128 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		27CE7EC31B291459003B2128 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		27EA5FA41A5BE32A0073F625 /* PhotoLock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoLock-Bridging-Header.h"; sourceTree = "<group>"; };
-		27EE168A1B5A7E6B0054B9AA /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		27EEE7771A4D8409003094D8 /* ImportPhotosFromFileSharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportPhotosFromFileSharingViewController.swift; sourceTree = "<group>"; };
 		C99390C11EACFD64F2AE1F94 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D412F3913F0CEB662F90C3E8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -356,7 +356,7 @@
 				27CE7EC31B291459003B2128 /* Settings.swift */,
 				272F668F1A49589500C44A54 /* Defaults.swift */,
 				2790548D1A4299C500370BC7 /* AppDelegate.swift */,
-				27EE168A1B5A7E6B0054B9AA /* Settings.h */,
+				27CB8B881B6AF60A009045EA /* Settings.h */,
 			);
 			path = Application;
 			sourceTree = "<group>";
